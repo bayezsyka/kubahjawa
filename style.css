@@ -234,7 +234,8 @@ section {
 
 .gallery-track {
     display: flex;
-    animation: scroll-left 20s linear infinite; /* Dipercepat dari 40s menjadi 20s */
+    animation: scroll-left 1s linear infinite;
+    -webkit-animation: scroll-left 1s linear infinite;
 }
 
 .gallery-track img {
