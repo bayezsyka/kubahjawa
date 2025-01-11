@@ -3,13 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #FFFFFF;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
@@ -18,47 +22,51 @@ body {
     padding: 0 2rem;
 }
 
-/* Navbar dengan warna yang lebih cerah */
+/* Navbar Styles */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #FFFFFF;
-    padding: 1rem;
+    padding: 1rem 0;
     z-index: 1000;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
-/* Mengubah behavior saat scroll */
 .navbar.scrolled {
-    background-color: #FFFFFF;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav-content {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
+    position: relative;
+    padding: 0 1rem;
 }
 
-.logo {
+.nav-left,
+.nav-right {
+    flex: 1;
+}
+
+.nav-center {
+    flex: none;
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
+    justify-content: center;
 }
 
-.logo img {
-    height: 40px;
+.logo-image {
+    height: 50px;
     width: auto;
-    filter: none;
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -68,13 +76,14 @@ body {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     background-color: #F8F9FA;
-    color: #3D8E7E; /* Ubah warna teks saat hover */
+    color: #3D8E7E;
 }
 
 .nav-links a::after {
@@ -85,7 +94,7 @@ body {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: #3D8E7E; /* Ubah warna garis bawah saat hover */
+    background-color: #3D8E7E;
     transition: width 0.3s ease;
 }
 
@@ -94,44 +103,22 @@ body {
     width: 80%;
 }
 
-.menu-toggle {
-    display: none;
-    color: #2C3E50;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-.menu-toggle:hover {
-    background-color: #F8F9FA;
-}
-
-.menu-toggle i {
-    transition: transform 0.3s ease;
-}
-
-.menu-toggle.active i {
-    transform: rotate(180deg);
-}
-
-/* Home Section dengan gradien yang lebih menarik */
-#home {
-    min-height: 100vh;
-    background: linear-gradient(
-        135deg,
-        rgba(61, 142, 126, 0.95),
-        rgba(41, 128, 185, 0.85)
-    ), url('IMG_0237.jpg') center/cover;
-    display: flex;
-    align-items: center;
-    text-align: center;
+/* Section Styles */
+section {
     padding: 6rem 0 2rem;
 }
 
+#home {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(61, 142, 126, 0.95), rgba(41, 128, 185, 0.85)), url('foto_utama/bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 70px; /* Prevent content from being hidden by navbar */
+}
+
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #FFFFFF;
     font-weight: 700;
@@ -139,23 +126,26 @@ body {
 }
 
 .hero-content p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 2.5rem;
     color: #F8F9FA;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: 0.75rem 2rem;
     background-color: #FFD700;
     color: #2C3E50;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -166,17 +156,11 @@ body {
 }
 
 /* Informasi Terbaru Section */
-#latest-news {
-    min-height: 100vh;
-    background-color: #F8F9FA;
-    padding: 6rem 0 2rem;
-}
-
 #latest-news h2 {
     color: #2C3E50;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -192,7 +176,8 @@ body {
     padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    width: 300px;
+    max-width: 350px;
+    width: 100%;
     cursor: pointer;
     transition: transform 0.3s ease;
     text-align: center;
@@ -204,7 +189,7 @@ body {
 
 .news-image {
     width: 100%;
-    height: 180px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -212,27 +197,72 @@ body {
 
 .news-title {
     color: #3D8E7E;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
 .news-description {
     color: #2C3E50;
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
 }
 
-/* Profil Section */
-#profile {
-    background-color: #FFFFFF;
-    padding: 6rem 0 2rem;
+/* Gallery Section */
+#gallery h2 {
+    color: #2C3E50;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
+.gallery-event {
+    margin-bottom: 4rem;
+}
+
+.gallery-event h3 {
+    color: #3D8E7E;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.gallery-slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery-track {
+    display: flex;
+    animation: scroll-left 20s linear infinite; /* Dipercepat dari 40s menjadi 20s */
+}
+
+.gallery-track img {
+    width: 300px; /* Memperbesar ukuran gambar */
+    height: 225px; /* Menyesuaikan tinggi gambar */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-track img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Profile Section */
 #profile h2 {
     color: #2C3E50;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -247,7 +277,7 @@ body {
 
 .profile-content p {
     color: #2C3E50;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     text-align: justify;
@@ -264,40 +294,35 @@ body {
 .profile-highlight h3 {
     color: #3D8E7E;
     margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
 }
 
 /* Vision and Mission Section */
-#vision-mission {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    padding: 6rem 0 2rem;
-}
-
 #vision-mission h2 {
     color: #2C3E50;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 .curriculum-intro {
     background: linear-gradient(135deg, #3D8E7E 0%, #2C7A6B 100%);
     color: white;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 20px;
     margin-bottom: 4rem;
     box-shadow: 0 10px 30px rgba(61, 142, 126, 0.2);
 }
 
 .curriculum-intro h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     color: #FFD700;
 }
 
 .curriculum-intro p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -330,12 +355,12 @@ body {
 }
 
 .vision-card h3, .mission-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #2C3E50;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .vision-card i {
@@ -353,12 +378,12 @@ body {
 
 .mission-list li {
     margin-bottom: 1rem;
-    padding-left: 2rem;
+    padding-left: 1.5rem;
     position: relative;
     line-height: 1.6;
 }
 
-.mission-list li:before {
+.mission-list li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -370,23 +395,17 @@ body {
 }
 
 /* About Section */
-#about {
-    min-height: 100vh;
-    background-color: #F8F9FA;
-    padding: 6rem 0 2rem;
-}
-
 #about h2 {
     color: #2C3E50;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
     margin-top: 2rem;
 }
@@ -406,7 +425,7 @@ body {
 
 .about-card i {
     color: #3D8E7E;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -423,7 +442,7 @@ body {
 .social-media-links h3 {
     color: #2C3E50;
     margin-bottom: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -432,6 +451,7 @@ body {
     justify-content: center;
     gap: 3rem;
     padding: 1rem;
+    flex-wrap: wrap;
 }
 
 .social-icon {
@@ -471,23 +491,17 @@ body {
 }
 
 /* Contact Section */
-#contact {
-    min-height: 100vh;
-    background-color: #FFFFFF;
-    padding: 6rem 0 2rem;
-}
-
 #contact h2 {
     color: #2C3E50;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 .contact-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -520,55 +534,17 @@ body {
     margin-right: 1.5rem;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form-input {
-    padding: 1rem;
-    border: 2px solid #E9ECEF;
-    border-radius: 10px;
-    font-family: inherit;
-    background-color: #F8F9FA;
-    transition: all 0.3s ease;
-}
-
-.form-input:focus {
-    outline: none;
-    border-color: #3D8E7E;
-    background-color: #FFFFFF;
-}
-
-.submit-button {
-    padding: 1rem;
-    background-color: #3D8E7E;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.submit-button:hover {
-    background-color: #2C7A6B;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(61, 142, 126, 0.3);
-}
-
 /* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 2000; /* Sit on top */
-    left: 0;
+    position: fixed;
+    z-index: 2000;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -576,7 +552,6 @@ body {
 
 .modal-content {
     background-color: #FFFFFF;
-    margin: auto;
     padding: 2rem;
     border: 1px solid #888;
     width: 90%;
@@ -587,8 +562,8 @@ body {
 }
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .close-button {
@@ -604,13 +579,11 @@ body {
 .close-button:hover,
 .close-button:focus {
     color: #000;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .modal-image {
     width: 100%;
-    height: auto; /* Membuat tinggi otomatis menyesuaikan lebar */
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -618,7 +591,7 @@ body {
 
 .modal-title {
     color: #3D8E7E;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -630,54 +603,77 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    html {
+        font-size: 14px;
     }
 
-    .nav-links.active {
+    .nav-content {
+        padding: 0 1rem;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: none; /* Hide nav-left and nav-right on mobile */
+    }
+
+    .nav-center {
+        flex: 1;
         display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #FFFFFF;
-        padding: 1.5rem;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        justify-content: center;
     }
 
-    .nav-links.active a {
-        padding: 1rem;
-        border-bottom: 1px solid #E9ECEF;
+    .logo-image {
+        height: 40px; /* Reduce logo size on mobile */
     }
 
-    .nav-links.active a:last-child {
-        border-bottom: none;
-    }
-
-    .menu-toggle {
-        display: block;
+    #home {
+        margin-top: 70px; /* Adjust if needed */
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
-    .container {
-        padding: 0 1.5rem;
+    .hero-content p {
+        font-size: 0.9rem;
     }
 
-    .about-card,
-    .contact-item a {
-        transform: none !important;
+    .cta-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
     }
-    
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .gallery-track img {
+        width: 250px; /* Memperbesar ukuran gambar lebih lanjut */
+        height: 188px; /* Menyesuaikan tinggi gambar */
+    }
+
+    .curriculum-intro {
+        padding: 1.5rem;
+    }
+
+    .curriculum-intro h3 {
+        font-size: 1.25rem;
+    }
+
+    .curriculum-intro p {
+        font-size: 0.9rem;
+    }
+
+    .vision-mission-grid,
+    .about-grid,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
     .social-icons {
         gap: 2rem;
-        flex-wrap: wrap;
     }
-    
+
     .social-icon {
         padding: 0.8rem;
     }
@@ -692,10 +688,11 @@ body {
     }
 
     .news-card {
-        width: 90%;
+        max-width: 90%;
     }
 
+    /* Modal Adjustments */
     .modal-content {
-        width: 90%;
+        padding: 1.5rem;
     }
 }

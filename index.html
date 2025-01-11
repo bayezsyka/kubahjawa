@@ -10,17 +10,20 @@
 <body>
     <nav class="navbar">
         <div class="nav-content">
-            <a href="#home" class="logo">
-                <img src="logo.png" alt="Logo Al-Anwar" style="height: 40px; vertical-align: middle; margin-right: 8px;">
-            </a>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#latest-news">Informasi Terbaru</a> <!-- Link ke Informasi Terbaru -->
-                <a href="#profile">About</a>
-                <a href="#contact">Contact</a>
+            <div class="nav-left">
+                <!-- Kosong untuk memusatkan logo -->
             </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="nav-center">
+                <a href="#home" class="logo">
+                    <img src="foto_utama/logo.png" alt="Logo Al-Anwar" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -42,17 +45,17 @@
         <div class="container">
             <h2>Informasi Terbaru</h2>
             <div class="latest-news-grid">
-                <div class="news-card">
+                <div class="news-card" data-title="Pendaftaran Santri" data-description="Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas." data-image="foto_informasi/brosur.png">
                     <img src="foto_informasi/brosur.png" alt="Pendaftaran Santri" class="news-image">
                     <h3 class="news-title">Pendaftaran Santri</h3>
                     <p class="news-description">Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas.</p>
                 </div>
-                <div class="news-card">
+                <div class="news-card" data-title="Peringatan Isra Miraj" data-description="Peringatan Isra Miraj akan dilaksanakan pada tanggal 27 Rajab 1445 H. Acara ini akan diisi dengan berbagai kegiatan keagamaan dan sosial untuk meningkatkan keimanan dan ketakwaan santri." data-image="foto_informasi/isramiraj.png">
                     <img src="foto_informasi/isramiraj.png" alt="Peringatan Isra Miraj" class="news-image">
                     <h3 class="news-title">Peringatan Isra Miraj</h3>
                     <p class="news-description">Peringatan Isra Miraj akan dilaksanakan pada tanggal 27 Rajab 1445 H. Acara ini akan diisi dengan berbagai kegiatan keagamaan dan sosial untuk meningkatkan keimanan dan ketakwaan santri.</p>
                 </div>
-                <!-- Tambahkan lebih banyak news-card sesuai kebutuhan -->
+                <!-- Tambahkan lebih banyak news-card sesuai kebutuhan dengan data-title, data-description, dan data-image -->
             </div>
         </div>
     </section>
@@ -146,6 +149,72 @@
         </div>
     </section>
 
+    <!-- Section Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+
+            <!-- Haul Akbar KH Anwar Mukhtar 2024 -->
+            <div class="gallery-event">
+                <h3>Haul Akbar KH Anwar Mukhtar 2024</h3>
+                <div class="gallery-slider">
+                    <div class="gallery-track">
+                        <!-- Original Images -->
+                        <img src="gallery/haul_akbar/foto (1).jpg" alt="Haul Akbar 2024 - Foto 1"> 
+                        <img src="gallery/haul_akbar/foto (2).jpg" alt="Haul Akbar 2024 - Foto 2"> 
+                        <img src="gallery/haul_akbar/foto (3).jpg" alt="Haul Akbar 2024 - Foto 3"> 
+                        <img src="gallery/haul_akbar/foto (4).jpg" alt="Haul Akbar 2024 - Foto 4"> 
+                        <img src="gallery/haul_akbar/foto (5).jpg" alt="Haul Akbar 2024 - Foto 5"> 
+                        <img src="gallery/haul_akbar/foto (6).jpg" alt="Haul Akbar 2024 - Foto 6"> 
+                        <img src="gallery/haul_akbar/foto (7).jpg" alt="Haul Akbar 2024 - Foto 7"> 
+                        <img src="gallery/haul_akbar/foto (8).jpg" alt="Haul Akbar 2024 - Foto 8"> 
+                        <img src="gallery/haul_akbar/foto (9).jpg" alt="Haul Akbar 2024 - Foto 9"> 
+                        <!-- Duplicate Images for Seamless Loop -->
+                        <img src="gallery/haul_akbar/foto (1).jpg" alt="Haul Akbar 2024 - Foto 1"> 
+                        <img src="gallery/haul_akbar/foto (2).jpg" alt="Haul Akbar 2024 - Foto 2"> 
+                        <img src="gallery/haul_akbar/foto (3).jpg" alt="Haul Akbar 2024 - Foto 3"> 
+                        <img src="gallery/haul_akbar/foto (4).jpg" alt="Haul Akbar 2024 - Foto 4"> 
+                        <img src="gallery/haul_akbar/foto (5).jpg" alt="Haul Akbar 2024 - Foto 5"> 
+                        <img src="gallery/haul_akbar/foto (6).jpg" alt="Haul Akbar 2024 - Foto 6"> 
+                        <img src="gallery/haul_akbar/foto (7).jpg" alt="Haul Akbar 2024 - Foto 7"> 
+                        <img src="gallery/haul_akbar/foto (8).jpg" alt="Haul Akbar 2024 - Foto 8"> 
+                        <img src="gallery/haul_akbar/foto (9).jpg" alt="Haul Akbar 2024 - Foto 9"> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Akhirussanah 2024 -->
+            <div class="gallery-event">
+                <h3>Akhirussanah 2024</h3>
+                <div class="gallery-slider">
+                    <div class="gallery-track">
+                        <!-- Original Images -->
+                        <img src="gallery/akhirussanah/foto (1).jpg" alt="Akhirussanah 2024 - Foto 1"> 
+                        <img src="gallery/akhirussanah/foto (2).jpg" alt="Akhirussanah 2024 - Foto 2"> 
+                        <img src="gallery/akhirussanah/foto (3).jpg" alt="Akhirussanah 2024 - Foto 3"> 
+                        <img src="gallery/akhirussanah/foto (4).jpg" alt="Akhirussanah 2024 - Foto 4"> 
+                        <img src="gallery/akhirussanah/foto (5).jpg" alt="Akhirussanah 2024 - Foto 5"> 
+                        <img src="gallery/akhirussanah/foto (6).jpg" alt="Akhirussanah 2024 - Foto 6"> 
+                        <img src="gallery/akhirussanah/foto (7).jpg" alt="Akhirussanah 2024 - Foto 7"> 
+                        <img src="gallery/akhirussanah/foto (8).jpg" alt="Akhirussanah 2024 - Foto 8"> 
+                        <img src="gallery/akhirussanah/foto (9).jpg" alt="Akhirussanah 2024 - Foto 9"> 
+                        <!-- Duplicate Images for Seamless Loop -->
+                        <img src="gallery/akhirussanah/foto (1).jpg" alt="Akhirussanah 2024 - Foto 1"> 
+                        <img src="gallery/akhirussanah/foto (2).jpg" alt="Akhirussanah 2024 - Foto 2"> 
+                        <img src="gallery/akhirussanah/foto (3).jpg" alt="Akhirussanah 2024 - Foto 3"> 
+                        <img src="gallery/akhirussanah/foto (4).jpg" alt="Akhirussanah 2024 - Foto 4"> 
+                        <img src="gallery/akhirussanah/foto (5).jpg" alt="Akhirussanah 2024 - Foto 5"> 
+                        <img src="gallery/akhirussanah/foto (6).jpg" alt="Akhirussanah 2024 - Foto 6"> 
+                        <img src="gallery/akhirussanah/foto (7).jpg" alt="Akhirussanah 2024 - Foto 7"> 
+                        <img src="gallery/akhirussanah/foto (8).jpg" alt="Akhirussanah 2024 - Foto 8"> 
+                        <img src="gallery/akhirussanah/foto (9).jpg" alt="Akhirussanah 2024 - Foto 9"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Section Gallery -->
+
     <section id="contact">
         <div class="container">
             <h2>Hubungi Kami</h2>
@@ -176,13 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
-                    <input type="hidden" name="access_key" value="597cc65f-13af-4c48-baeb-899377360f9e">
-                    <input type="text" name="name" placeholder="Nama Lengkap" class="form-input" required>
-                    <input type="email" name="email" placeholder="Email" class="form-input" required>
-                    <textarea name="message" placeholder="Pesan" class="form-input" rows="5" required></textarea>
-                    <button type="submit" class="submit-button">Kirim Pesan</button>
-                </form>
+                <!-- Hapus form kirim email -->
             </div>
         </div>
     </section>
@@ -191,9 +254,9 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <img src="foto_informasi/brosur.png" alt="Pendaftaran Santri" class="modal-image">
-            <h3 class="modal-title">Pendaftaran Santri</h3>
-            <p class="modal-description">Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas.</p>
+            <img src="" alt="" class="modal-image">
+            <h3 class="modal-title"></h3>
+            <p class="modal-description"></p>
         </div>
     </div>
 

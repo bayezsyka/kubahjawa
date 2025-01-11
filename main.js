@@ -2,47 +2,13 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
-});
-
-// Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuToggle.classList.toggle('active'); // Tambahkan toggle kelas 'active' pada menu-toggle
-});
-
-// Hide mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-content')) {
-        navLinks.classList.remove('active');
-        menuToggle.classList.remove('active'); // Pastikan toggle kelas 'active' dihapus
-    }
-});
-
-// Contact Form Handler
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const formObject = Object.fromEntries(formData);
-    
-    // Here you would typically send the data to a server
-    console.log('Form submitted:', formObject);
-    
-    // Reset form
-    contactForm.reset();
-    
-    // Show success message (you can customize this)
-    alert('Terima kasih! Pesan Anda telah terkirim.');
 });
 
 // Navbar scroll effect
@@ -62,24 +28,44 @@ const modalTitle = document.querySelector('.modal-title');
 const modalDescription = document.querySelector('.modal-description');
 const closeButton = document.querySelector('.close-button');
 
-// Menampilkan modal saat halaman dimuat
-window.addEventListener('load', () => {
-    // Atur isi modal dengan informasi pendaftaran santri
-    modalImage.src = "foto_informasi/brosur.png";
-    modalTitle.textContent = "Pendaftaran Santri";
-    modalDescription.textContent = "Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas.";
-    
+// Function to open modal with specific content
+function openModal(title, description, imageSrc) {
+    modalImage.src = imageSrc;
+    modalImage.alt = title;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
     modal.style.display = 'flex';
-});
+}
 
-// Menutup modal ketika tombol close diklik
+// Close modal when close button is clicked
 closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
 });
 
-// Menutup modal ketika area di luar modal-content diklik
+// Close modal when clicking outside the modal content
 window.addEventListener('click', (e) => {
     if (e.target == modal) {
         modal.style.display = 'none';
     }
+});
+
+// Initial Modal on Page Load
+window.addEventListener('load', () => {
+    // Set initial modal content
+    const initialTitle = "Pendaftaran Santri";
+    const initialDescription = "Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas.";
+    const initialImage = "foto_informasi/brosur.png";
+    openModal(initialTitle, initialDescription, initialImage);
+});
+
+// Add click event listeners to news cards
+const newsCards = document.querySelectorAll('.news-card');
+
+newsCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const title = card.getAttribute('data-title');
+        const description = card.getAttribute('data-description');
+        const imageSrc = card.getAttribute('data-image');
+        openModal(title, description, imageSrc);
+    });
 });
