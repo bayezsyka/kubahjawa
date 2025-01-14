@@ -119,7 +119,6 @@ section {
 
 .hero-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
     color: #FFFFFF;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -127,7 +126,8 @@ section {
 
 .hero-content p {
     font-size: 1rem;
-    margin-bottom: 2.5rem;
+    margin-top: auto;
+    padding-bottom: 5%;
     color: #F8F9FA;
     max-width: 800px;
     margin: 0 auto;
@@ -490,7 +490,7 @@ section {
     color: #25D366;
 }
 
-/* Contact Section */
+/* Contact Section (Diubah) */
 #contact h2 {
     color: #2C3E50;
     text-align: center;
@@ -500,38 +500,42 @@ section {
 }
 
 .contact-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.contact-info {
-    margin-bottom: 2.5rem;
-}
-
-.contact-item a {
+.contact-card {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: inherit;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
     background-color: #F8F9FA;
+    padding: 1.5rem 2rem;
     border-radius: 10px;
-    transition: transform 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
 }
 
-.contact-item a:hover {
-    transform: translateX(10px);
-    color: #3D8E7E;
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-.contact-item i {
+.contact-card i {
     color: #3D8E7E;
-    font-size: 1.8rem;
-    margin-right: 1.5rem;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+/* Menghilangkan underline dan menjaga warna tetap hitam untuk link di Contact */
+.contact-card a {
+    text-decoration: none;
+    color: #000; /* Warna hitam */
+}
+
+.contact-card a:hover {
+    color: #3D8E7E; /* Opsional: jika Anda ingin warna berubah saat hover */
 }
 
 /* Modal Styles */
@@ -667,7 +671,8 @@ section {
     .vision-mission-grid,
     .about-grid,
     .contact-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
     }
 
     .social-icons {
@@ -689,6 +694,27 @@ section {
 
     .news-card {
         max-width: 90%;
+    }
+
+    /* Contact Section (Diubah) */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Menghilangkan underline dan menjaga warna tetap hitam untuk link di Contact */
+    .contact-card a {
+        text-decoration: none;
+        color: #000; /* Warna hitam */
+    }
+
+    .contact-card a:hover {
+        color: #3D8E7E; /* Opsional: jika Anda ingin warna berubah saat hover */
     }
 
     /* Modal Adjustments */

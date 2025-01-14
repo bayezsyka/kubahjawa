@@ -49,6 +49,23 @@ window.addEventListener('click', (e) => {
     }
 });
 
+// Scroll to top when logo is clicked
+const logoLink = document.querySelector('.logo');
+logoLink.addEventListener('click', (e) => {
+    // Delay to ensure smooth scrolling
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, 100);
+});
+
+// Ensure page scrolls to top on refresh
+window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+});
+
 // Initial Modal on Page Load
 window.addEventListener('load', () => {
     // Set initial modal content
