@@ -5,258 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pondok Pesantren Al-Anwar Pakijangan</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- Link ke style.css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="nav-left">
-                <!-- Kosong untuk memusatkan logo -->
-            </div>
-            <div class="nav-center">
+<body class="bg-white overflow-x-hidden overflow-y-scroll scroll-smooth">
+    <nav class="fixed top-0 w-full bg-white py-2 shadow-lg transition-shadow duration-300 ease-in-out z-50">
+        <div class="flex items-center justify-between px-4">
+            <div class="flex-1"></div>
+            <div class="flex-none flex justify-center">
                 <a href="#home" class="logo">
-                    <img src="foto_utama/logo.png" alt="Logo Al-Anwar" class="logo-image">
+                    <img src="foto_utama/logo.png" alt="Logo Al-Anwar" class="h-12 w-auto">
                 </a>
             </div>
-            <div class="nav-right">
-                <div class="nav-links">
-                    <!-- <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a> -->
-                </div>
+            <div class="flex-1">
+                <div class="flex justify-end gap-8"></div>
             </div>
         </div>
     </nav>
 
-    <section id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Pondok Pesantren Al-Anwar</h1>
-                <p>Membentuk Generasi Qurani yang Berilmu dan Berakhlak Mulia</p>
-                <div class="button-group">
-                    <a href="#latest-news" class="cta-button">Pelajari Lebih Lanjut</a>
+    <section id="home" class="min-h-screen bg-cover bg-center flex items-center text-center mt-16" style="background-image: url('foto_utama/bg.png');">
+        <div class="absolute"></div>
+        <div class="container mx-auto px-8 py-16 text-white relative z-10">
+            <h1 class="text-4xl text-start font-bold leading-tight text-shadow-md">Pondok Pesantren Al-Anwar</h1>
+            <div class="flex justify-start gap-4 mt-2">
+                <a href="#latest-news" class="bg-white text-sky-950 py-2 px-6 rounded-full text-base font-semibold shadow-lg hover:bg-cyan-700 transform hover:translate-y-1 transition-all">Pelajari Lebih Lanjut</a>
+                <a href="ppdb.html" class="bg-white text-sky-950 py-2 px-6 rounded-full text-base font-semibold shadow-lg hover:bg-cyan-700 transform hover:translate-y-1 transition-all">Informasi PPDB dan PPSB</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="latest-news" class="py-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-teal-800 mb-12 text-center relative after:content-[''] after:absolute after:w-24 after:h-1 after:bg-teal-500 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:mt-4 pb-6">Informasi Terbaru</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <!-- Card 1 -->
+                <div class="group bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+                    <div class="overflow-hidden rounded-xl mb-4 relative">
+                        <img src="foto_informasi/brosur.png" alt="Pendaftaran Santri" class="w-full h-auto object-cover rounded-xl">
+                    </div>
+                    <h3 class="text-teal-700 text-xl font-bold mb-3 group-hover:text-teal-600">Pendaftaran Santri</h3>
+                    <p class="text-gray-600 leading-relaxed">Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas.</p>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="group bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+                    <div class="overflow-hidden rounded-xl mb-4 relative">
+                        <img src="foto_informasi/ppdb.png" alt="PPDB SMP Al-Anwar" class="w-full h-auto object-cover rounded-xl">
+                    </div>
+                    <h3 class="text-teal-700 text-xl font-bold mb-3 group-hover:text-teal-600">PPDB SMP Al-Anwar 2025/2026</h3>
+                    <p class="text-gray-600 leading-relaxed">Telah dibuka SMP Al-Anwar Tahun Ajaran 2025/2026. Untuk informasi lebih lanjut bisa klik tombol pada halaman atas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="profile" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-teal-800 mb-12 text-center relative after:content-[''] after:absolute after:w-24 after:h-1 after:bg-teal-500 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:mt-4 pb-6">Profil Pesantren</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg text-gray-700 mb-12 leading-relaxed">Pondok Pesantren Al-Anwar Pakijangan terletak di Jl. Raya Pakijangan Bulakamba No. 08, Brebes, Jawa Tengah, dengan kode pos 52253. Pesantren ini didirikan sekitar tahun 1950-an oleh KH. Anwar Mukhtar sebagai majelis terbuka yang dapat diikuti oleh siapa saja tanpa batasan.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <h3 class="text-2xl font-bold text-teal-700 mb-4">Keunggulan Kami</h3>
+                    <p class="text-gray-600 leading-relaxed">Al-Anwar Pakijangan memiliki keunggulan dalam pengajaran ilmu nahwu, Tahfidz Al-Qur'an, serta pengembangan soft skill santri untuk menghadapi tantangan kehidupan modern, menjadikannya salah satu pesantren yang memadukan nilai-nilai klasik dan kemampuan adaptasi era kini.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Informasi Terbaru -->
-    <section id="latest-news">
-        <div class="container">
-            <h2>Informasi Terbaru</h2>
-            <div class="latest-news-grid">
-                <div class="news-card" data-title="Pendaftaran Santri" data-description="Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas." data-image="foto_informasi/brosur.png">
-                    <img src="foto_informasi/brosur.png" alt="Pendaftaran Santri" class="news-image">
-                    <h3 class="news-title">Pendaftaran Santri</h3>
-                    <p class="news-description">Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas.</p>
-                </div>
-                <div class="news-card" data-title="Peringatan Isra Miraj" data-description="Peringatan Isra Miraj akan dilaksanakan pada tanggal 27 Rajab 1445 H. Acara ini akan diisi dengan berbagai kegiatan keagamaan dan sosial untuk meningkatkan keimanan dan ketakwaan santri." data-image="foto_informasi/isramiraj.png">
-                    <img src="foto_informasi/isramiraj.png" alt="Peringatan Isra Miraj" class="news-image">
-                    <h3 class="news-title">Peringatan Isra Miraj</h3>
-                    <p class="news-description">Peringatan Isra Miraj akan dilaksanakan pada tanggal 27 Rajab 1445 H. Acara ini akan diisi dengan berbagai kegiatan keagamaan dan sosial untuk meningkatkan keimanan dan ketakwaan santri.</p>
-                </div>
-                <!-- Tambahkan lebih banyak news-card sesuai kebutuhan dengan data-title, data-description, dan data-image -->
-            </div>
-        </div>
-    </section>
-    <!-- Akhir Section Informasi Terbaru -->
-
-    <section id="profile">
-        <div class="container">
-            <h2>Profil Pesantren</h2>
-            <div class="profile-content">
-                <p>Pondok Pesantren Al-Anwar Pakijangan terletak di Jl. Raya Pakijangan Bulakamba No. 08, RT 4 RW 2, Brebes, Jawa Tengah, dengan kode pos 52253. Pesantren ini didirikan sekitar tahun 1950-an oleh KH. Anwar Mukhtar sebagai majelis terbuka yang dapat diikuti oleh siapa saja tanpa batasan.</p>
-                
-                <p>Pada tahun 1995, estafet kepemimpinan dilanjutkan oleh KH. Miftah Anwar, yang mengembangkan pesantren ini menjadi pesantren salaf dengan sistem pendidikan yang lebih tersistematis dan terarah.</p>
-                
-                <div class="profile-highlight">
-                    <h3>Keunggulan Kami</h3>
-                    <p>Al-Anwar Pakijangan memiliki keunggulan dalam pengajaran ilmu nahwu, Tahfidz Al-Qur'an, serta pengembangan soft skill santri untuk menghadapi tantangan kehidupan modern, menjadikannya salah satu pesantren yang memadukan nilai-nilai klasik dan kemampuan adaptasi era kini.</p>
+    <section id="vision-mission" class="py-24 bg-gradient-to-br from-teal-700 to-teal-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center relative after:content-[''] after:absolute after:w-24 after:h-1 after:bg-yellow-400 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:mt-4 pb-6">Visi dan Misi</h2>
+            
+            <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl mb-12 max-w-3xl mx-auto">
+                <h3 class="text-2xl font-bold text-yellow-300 mb-4">Kurikulum Cakra Wiyata</h3>
+                <div class="space-y-4 text-gray-100">
+                    <p>Dalam upaya meningkatkan kualitas pendidikan dan menjawab tantangan zaman, Pesantren Al-Anwar Pakijangan mengadopsi kurikulum inovatif bernama "Cakra Wiyata." Nama ini mencerminkan semangat untuk menggerakkan roda pendidikan secara dinamis dan berkelanjutan.</p>
+                    <p>Kurikulum ini dirancang untuk mempersiapkan santri menjadi individu yang cerdas, berkarakter, dan siap menghadapi dunia dengan penuh percaya diri.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="vision-mission">
-        <div class="container">
-            <h2>Visi dan Misi</h2>
-            <div class="curriculum-intro">
-                <h3>Kurikulum Cakra Wiyata</h3>
-                <p>Dalam upaya meningkatkan kualitas pendidikan dan menjawab tantangan zaman, Pesantren Al-Anwar Pakijangan mengadopsi kurikulum inovatif bernama "Cakra Wiyata." Nama ini mencerminkan semangat untuk menggerakkan roda pendidikan secara dinamis dan berkelanjutan.</p>
-                <p>"Cakra" yang berarti roda melambangkan proses pendidikan yang terus bergerak maju, sedangkan "Wiyata" bermakna pendidikan sebagai inti dari kurikulum ini. Dengan kurikulum ini, Pesantren Al-Anwar berkomitmen tidak hanya menyediakan pendidikan agama yang mendalam, tetapi juga keterampilan praktis yang relevan dengan kebutuhan masa depan.</p>
-                <p>Kurikulum ini dirancang untuk mempersiapkan santri menjadi individu yang cerdas, berkarakter, dan siap menghadapi dunia dengan penuh percaya diri.</p>
-            </div>
-
-            <div class="vision-mission-grid">
-                <div class="vision-card">
-                    <h3><i class="fas fa-eye"></i> Visi Pesantren</h3>
-                    <p>Pesantren Al-Anwar Pakijangan memiliki visi menjadi lembaga pendidikan yang mampu mengintegrasikan ilmu agama dan ilmu kehidupan dalam kerangka kurikulum. Kurikulum "Cakra Wiyata" bertujuan mencetak generasi santri yang berilmu, berkarakter, dan mampu bersaing.</p>
-                    <p>Pesantren ini bertekad menjadi pusat pendidikan yang mendukung terciptanya keseimbangan antara penguasaan ilmu agama, pengembangan karakter, dan keterampilan duniawi yang relevan dengan tantangan era modern.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-teal-800 mb-4 flex items-center gap-2">
+                        <i class="fas fa-eye text-2xl text-teal-600"></i>
+                        Visi Pesantren
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">Pesantren Al-Anwar Pakijangan memiliki visi menjadi lembaga pendidikan yang mampu mengintegrasikan ilmu agama dan ilmu kehidupan dalam kerangka kurikulum. Kurikulum "Cakra Wiyata" bertujuan mencetak generasi santri yang berilmu, berkarakter, dan mampu bersaing.</p>
                 </div>
 
-                <div class="mission-card">
-                    <h3><i class="fas fa-bullseye"></i> Misi Pesantren</h3>
-                    <ul class="mission-list">
-                        <li>Menerapkan pendidikan holistik yang mengintegrasikan nilai-nilai agama, keterampilan praktis, dan pengembangan karakter secara komprehensif.</li>
-                        <li>Mendorong kemandirian dan kreativitas santri melalui pengalaman belajar yang inovatif.</li>
-                        <li>Menyediakan pembelajaran yang berkelanjutan dan adaptif terhadap perkembangan zaman.</li>
-                        <li>Menciptakan lingkungan pendidikan yang positif untuk mendukung pertumbuhan intelektual, spiritual, dan emosional santri.</li>
-                        <li>Menumbuhkan jiwa kepemimpinan dan tanggung jawab sosial untuk membentuk santri menjadi pemimpin yang berkarakter dan peduli terhadap masyarakat.</li>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-teal-800 mb-4 flex items-center gap-2">
+                        <i class="fas fa-bullseye text-2xl text-teal-600"></i>
+                        Misi Pesantren
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2">
+                            <span class="text-teal-500 mt-1">•</span>
+                            Menerapkan pendidikan holistik yang mengintegrasikan nilai-nilai agama, keterampilan praktis, dan pengembangan karakter secara komprehensif.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-teal-500 mt-1">•</span>
+                            Mendorong kemandirian dan kreativitas santri melalui pengalaman belajar yang inovatif.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-teal-500 mt-1">•</span>
+                            Menyediakan pembelajaran yang berkelanjutan dan adaptif terhadap perkembangan zaman.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-teal-500 mt-1">•</span>
+                            Menciptakan lingkungan pendidikan yang positif untuk mendukung pertumbuhan intelektual, spiritual, dan emosional santri.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-teal-500 mt-1">•</span>
+                            Menumbuhkan jiwa kepemimpinan dan tanggung jawab sosial untuk membentuk santri menjadi pemimpin yang berkarakter dan peduli terhadap masyarakat.
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>Keunggulan</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <i class="fas fa-book-open"></i>
-                    <h3>Ilmu Nahwu Terapan</h3>
-                    <p>Mempelajari ilmu nahwu secara mendalam dan praktis untuk meningkatkan pemahaman tentang bahasa Arab.</p>
+    <section id="about" class="py-24">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-teal-800 mb-12">Keunggulan</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-xl text-center hover:translate-y-2 transition-transform">
+                    <i class="fas fa-book-open text-teal-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-teal-800 mb-4">Ilmu Nahwu Terapan</h3>
+                    <p class="text-sm text-teal-900">Mempelajari ilmu nahwu secara mendalam dan praktis untuk meningkatkan pemahaman tentang bahasa Arab.</p>
                 </div>
-                <div class="about-card">
-                    <i class="fas fa-quran"></i>
-                    <h3>Program Tahfidz Quran</h3>
-                    <p>Program unggulan untuk menghafal Al-Quran dengan bimbingan ustadz dan ustadzah yang berpengalaman.</p>
+                <div class="bg-white p-8 rounded-xl shadow-xl text-center hover:translate-y-2 transition-transform">
+                    <i class="fas fa-quran text-teal-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-teal-800 mb-4">Program Tahfidz Quran</h3>
+                    <p class="text-sm text-teal-900">Program unggulan untuk menghafal Al-Quran dengan bimbingan ustadz dan ustadzah yang berpengalaman.</p>
                 </div>
-                <div class="about-card">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <h3>Pengembangan Soft Skill</h3>
-                    <p>Fokus pada pengembangan kemampuan kepemimpinan, tanggung jawab, dan keterampilan hidup lainnya.</p>
-                </div>
-            </div>
-            
-            <div class="social-media-links">
-                <h3>Ikuti Kami di Media Sosial</h3>
-                <div class="social-icons">
-                    <a href="https://www.youtube.com/@alanwarpakijangan5759" target="_blank" class="social-icon">
-                        <i class="fab fa-youtube"></i>
-                        <span>YouTube</span>
-                    </a>
-                    <a href="https://www.instagram.com/kubahjawa/" target="_blank" class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://wa.link/mhzz3v" target="_blank" class="social-icon">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
+                <div class="bg-white p-8 rounded-xl shadow-xl text-center hover:translate-y-2 transition-transform">
+                    <i class="fas fa-chalkboard-teacher text-teal-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-teal-800 mb-4">Pengembangan Soft Skill</h3>
+                    <p class="text-sm text-teal-900">Fokus pada pengembangan kemampuan kepemimpinan, tanggung jawab, dan keterampilan hidup lainnya.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Gallery -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Gallery</h2>
-
-            <!-- Haul Akbar KH Anwar Mukhtar 2024 -->
-            <div class="gallery-event">
-                <h3>Haul Akbar KH. Anwar Mukhtar 2024</h3>
-                <div class="gallery-slider">
-                    <div class="gallery-track">
-                        <img src="gallery/haul_akbar/foto1.jpg" alt="Haul Akbar 2024 - Foto 1"> 
-                        <img src="gallery/haul_akbar/foto2.jpg" alt="Haul Akbar 2024 - Foto 2"> 
-                        <img src="gallery/haul_akbar/foto3.jpg" alt="Haul Akbar 2024 - Foto 3"> 
-                        <img src="gallery/haul_akbar/foto4.jpg" alt="Haul Akbar 2024 - Foto 4"> 
-                        <img src="gallery/haul_akbar/foto5.jpg" alt="Haul Akbar 2024 - Foto 5"> 
-                        <img src="gallery/haul_akbar/foto6.jpg" alt="Haul Akbar 2024 - Foto 6"> 
-                        <img src="gallery/haul_akbar/foto7.jpg" alt="Haul Akbar 2024 - Foto 7"> 
-                        <img src="gallery/haul_akbar/foto8.jpg" alt="Haul Akbar 2024 - Foto 8"> 
-                        <img src="gallery/haul_akbar/foto9.jpg" alt="Haul Akbar 2024 - Foto 9"> 
-                        <!-- Duplicate untuk loop tanpa putus -->
-                        <img src="gallery/haul_akbar/foto1.jpg" alt="Haul Akbar 2024 - Foto 1"> 
-                        <img src="gallery/haul_akbar/foto2.jpg" alt="Haul Akbar 2024 - Foto 2"> 
-                        <img src="gallery/haul_akbar/foto3.jpg" alt="Haul Akbar 2024 - Foto 3"> 
-                        <img src="gallery/haul_akbar/foto4.jpg" alt="Haul Akbar 2024 - Foto 4"> 
-                        <img src="gallery/haul_akbar/foto5.jpg" alt="Haul Akbar 2024 - Foto 5"> 
-                        <img src="gallery/haul_akbar/foto6.jpg" alt="Haul Akbar 2024 - Foto 6"> 
-                        <img src="gallery/haul_akbar/foto7.jpg" alt="Haul Akbar 2024 - Foto 7"> 
-                        <img src="gallery/haul_akbar/foto8.jpg" alt="Haul Akbar 2024 - Foto 8"> 
-                        <img src="gallery/haul_akbar/foto9.jpg" alt="Haul Akbar 2024 - Foto 9">                      
-                    </div>
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-teal-800 mb-12">Hubungi Kami</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-xl transform hover:translate-y-2 transition-transform w-full sm:w-auto">
+                    <i class="fas fa-map-marker-alt text-teal-700 text-2xl mr-4"></i>
+                    <p><a href="https://g.co/kgs/1k4ZKnT" target="_blank" class="text-teal-800">Jl. Raya Pakijangan Nomer 08, Brebes, Jawa Tengah</a></p>
                 </div>
-            </div>
-
-            <!-- Akhirussanah 2024 -->
-            <div class="gallery-event">
-                <h3>Akhirussanah 2023</h3>
-                <div class="gallery-slider">
-                    <div class="gallery-track">
-                        <img src="gallery/akhirussanah/akhirussanah1.jpg" alt="Akhirussanah 2024 - Foto 1"> 
-                        <img src="gallery/akhirussanah/akhirussanah2.jpg" alt="Akhirussanah 2024 - Foto 2"> 
-                        <img src="gallery/akhirussanah/akhirussanah3.jpg" alt="Akhirussanah 2024 - Foto 3"> 
-                        <img src="gallery/akhirussanah/akhirussanah4.jpg" alt="Akhirussanah 2024 - Foto 4"> 
-                        <img src="gallery/akhirussanah/akhirussanah5.jpg" alt="Akhirussanah 2024 - Foto 5"> 
-                        <img src="gallery/akhirussanah/akhirussanah6.jpg" alt="Akhirussanah 2024 - Foto 6"> 
-                        <img src="gallery/akhirussanah/akhirussanah7.jpg" alt="Akhirussanah 2024 - Foto 7"> 
-                        <img src="gallery/akhirussanah/akhirussanah8.jpg" alt="Akhirussanah 2024 - Foto 8"> 
-                        <img src="gallery/akhirussanah/akhirussanah9.jpg" alt="Akhirussanah 2024 - Foto 9"> 
-                        <!-- Duplicate Images for Seamless Loop -->
-                        <img src="gallery/akhirussanah/akhirussanah1.jpg" alt="Akhirussanah 2024 - Foto 1"> 
-                        <img src="gallery/akhirussanah/akhirussanah2.jpg" alt="Akhirussanah 2024 - Foto 2"> 
-                        <img src="gallery/akhirussanah/akhirussanah3.jpg" alt="Akhirussanah 2024 - Foto 3"> 
-                        <img src="gallery/akhirussanah/akhirussanah4.jpg" alt="Akhirussanah 2024 - Foto 4"> 
-                        <img src="gallery/akhirussanah/akhirussanah5.jpg" alt="Akhirussanah 2024 - Foto 5"> 
-                        <img src="gallery/akhirussanah/akhirussanah6.jpg" alt="Akhirussanah 2024 - Foto 6"> 
-                        <img src="gallery/akhirussanah/akhirussanah7.jpg" alt="Akhirussanah 2024 - Foto 7"> 
-                        <img src="gallery/akhirussanah/akhirussanah8.jpg" alt="Akhirussanah 2024 - Foto 8"> 
-                        <img src="gallery/akhirussanah/akhirussanah9.jpg" alt="Akhirussanah 2024 - Foto 9">
-                    </div>
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-xl transform hover:translate-y-2 transition-transform w-full sm:w-auto">
+                    <i class="fas fa-phone-alt text-teal-700 text-2xl mr-4"></i>
+                    <p><a href="https://wa.link/mhzz3v" class="text-teal-800">+62 851 6160 3362</a></p>
+                </div>
+                <div class="flex items-center bg-white p-6 rounded-lg shadow-xl transform hover:translate-y-2 transition-transform w-full sm:w-auto">
+                    <i class="fas fa-envelope text-teal-700 text-2xl mr-4"></i>
+                    <p><a href="mailto:kubahjawa@gmail.com" class="text-teal-800">kubahjawa@gmail.com</a></p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Akhir Section Gallery -->
-
-    <!-- Section Contact (Diubah) -->
-    <section id="contact">
-        <div class="container">
-            <h2>Hubungi Kami</h2>
-            <div class="contact-container">
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="contact-info">
-                        <a href="https://g.co/kgs/1k4ZKnT" target="_blank">
-                            <p>Jl. Raya Pakijangan Nomer 08, Brebes, Jawa Tengah</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-phone-alt"></i>
-                    <div class="contact-info">
-                        <a href="https://wa.link/mhzz3v">
-                            <p>+62 851 6160 3362</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <div class="contact-info">
-                        <a href="mailto:kubahjawa@gmail.com">
-                            <p>kubahjawa@gmail.com</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Akhir Section Contact -->
-
-    <!-- Modal Pop-up -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="" alt="" class="modal-image">
-            <h3 class="modal-title"></h3>
-            <p class="modal-description"></p>
-        </div>
-    </div>
-
-    <script src="main.js"></script> <!-- Link ke main.js -->
+    
+    <script src="main.js"></script>
 </body>
 </html>

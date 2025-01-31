@@ -1,17 +1,38 @@
-// Smooth Scrolling
+// ----------------------------------------------------
+// Smooth Scrolling for All Internal Links
+// ----------------------------------------------------
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        if (targetElement) {
+            targetElement.scrollIntoView({
                 behavior: 'smooth'
             });
         }
     });
 });
 
-// Navbar scroll effect
+// ----------------------------------------------------
+// Smooth Scroll Specifically for "Pelajari Lebih Lanjut"
+// (Opsional, karena kode di atas sudah mencakup semua tautan #)
+// ----------------------------------------------------
+const learnMoreButton = document.querySelector('.cta-button');
+if (learnMoreButton) {
+    learnMoreButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetSection = document.querySelector('#latest-news');
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+}
+
+// ----------------------------------------------------
+// Navbar Scroll Effect
+// ----------------------------------------------------
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -21,14 +42,16 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// ----------------------------------------------------
 // Modal Pop-up Functionality
+// ----------------------------------------------------
 const modal = document.getElementById('modal');
 const modalImage = document.querySelector('.modal-image');
 const modalTitle = document.querySelector('.modal-title');
 const modalDescription = document.querySelector('.modal-description');
 const closeButton = document.querySelector('.close-button');
 
-// Function to open modal with specific content
+// Buka Modal dengan Konten Tertentu
 function openModal(title, description, imageSrc) {
     modalImage.src = imageSrc;
     modalImage.alt = title;
@@ -37,22 +60,23 @@ function openModal(title, description, imageSrc) {
     modal.style.display = 'flex';
 }
 
-// Close modal when close button is clicked
+// Tutup Modal saat tombol "X" diklik
 closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
 });
 
-// Close modal when clicking outside the modal content
+// Tutup Modal saat klik di area luar modal
 window.addEventListener('click', (e) => {
-    if (e.target == modal) {
+    if (e.target === modal) {
         modal.style.display = 'none';
     }
 });
 
-// Scroll to top when logo is clicked
+// ----------------------------------------------------
+// Logo Click: Scroll ke Atas Halaman
+// ----------------------------------------------------
 const logoLink = document.querySelector('.logo');
-logoLink.addEventListener('click', (e) => {
-    // Delay to ensure smooth scrolling
+logoLink.addEventListener('click', () => {
     setTimeout(() => {
         window.scrollTo({
             top: 0,
@@ -61,21 +85,26 @@ logoLink.addEventListener('click', (e) => {
     }, 100);
 });
 
-// Ensure page scrolls to top on refresh
+// ----------------------------------------------------
+// Pastikan Scroll di Posisi Atas Saat Refresh
+// ----------------------------------------------------
 window.addEventListener('beforeunload', () => {
     window.scrollTo(0, 0);
 });
 
-// Initial Modal on Page Load
+// ----------------------------------------------------
+// Modal Pertama Kali Saat Halaman Dimuat
+// ----------------------------------------------------
 window.addEventListener('load', () => {
-    // Set initial modal content
     const initialTitle = "Pendaftaran Santri";
     const initialDescription = "Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas.";
     const initialImage = "foto_informasi/brosur.png";
     openModal(initialTitle, initialDescription, initialImage);
 });
 
-// Add click event listeners to news cards
+// ----------------------------------------------------
+// Klik Kartu Informasi (News Card) untuk Buka Modal
+// ----------------------------------------------------
 const newsCards = document.querySelectorAll('.news-card');
 
 newsCards.forEach(card => {
