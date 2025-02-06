@@ -86,205 +86,122 @@
         </div>
     </section>
     
-    <section class="container mx-auto px-6 py-12">
-        <!-- Tab Navigation -->
-        <div class="mb-12 max-w-3xl mx-auto">
-          <ul class="flex justify-center space-x-4" id="custom-tab" data-tabs-toggle="#custom-tab-content">
-            <li>
-              <button class="px-6 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg transform transition hover:scale-105" id="pondok-tab" data-tabs-target="#pondok-tab-content" type="button">
-                Pondok
-              </button>
-            </li>
-            <li>
-              <button class="px-6 py-2 rounded-full text-sm font-semibold text-gray-800 bg-gray-200 shadow-lg transform transition hover:scale-105" id="pondok-smp-tab" data-tabs-target="#pondok-smp-tab-content" type="button">
-                Pondok dan SMP
-              </button>
-            </li>
-            <li>
-              <button class="px-6 py-2 rounded-full text-sm font-semibold text-gray-800 bg-gray-200 shadow-lg transform transition hover:scale-105" id="ringkasan-tab" data-tabs-target="#ringkasan-tab-content" type="button">
-                Ringkasan
-              </button>
-            </li>
-          </ul>
-        </div>
-      
-        <!-- Tab Content -->
-        <div class="max-w-3xl mx-auto" id="custom-tab-content">
-          <!-- Tab 1: Pondok -->
-          <div class="hidden p-6 bg-white shadow-xl rounded-3xl" id="pondok-tab-content">
-            <h2 class="text-2xl font-extrabold text-gray-900 mb-6">Biaya Pondok</h2>
-            
-            <!-- Biaya Pendaftaran -->
-            <div class="mb-6">
-              <h3 class="text-xl font-bold text-gray-800 mb-3">Biaya Pendaftaran</h3>
-              <p class="text-lg text-gray-900 mb-3">Rp2.360.000</p>
-              <ul class="list-disc ml-6 space-y-2 text-base text-gray-600">
-                <li>Pendaftaran: Rp350.000</li>
-                <li>Uang Gedung: Rp1.000.000</li>
-                <li>Almamater: Rp250.000</li>
-                <li>Seragam Putih: Rp100.000</li>
-                <li>Peci/Kerudung: Rp60.000</li>
-                <li>Al Anwar Bersholawat: Rp100.000</li>
-                <li>Makan Bulan Pertama: Rp400.000</li>
-                <li>SPP Madrasah Bulan Pertama: Rp100.000</li>
-              </ul>
-            </div>
-            
-            <!-- Biaya Bulanan -->
-            <div class="mb-6">
-              <h3 class="text-xl font-bold text-gray-800 mb-3">Biaya Bulanan</h3>
-              <p class="text-lg text-gray-900 mb-3">Rp500.000</p>
-              <ul class="list-disc ml-6 space-y-2 text-base text-gray-600">
-                <li>SPP Madrasah: Rp100.000</li>
-                <li>Makan: Rp400.000</li>
-              </ul>
-            </div>
-            
-            <!-- Biaya Per Semester -->
-            <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3">Biaya Per Semester</h3>
-              <p class="text-lg text-gray-900 mb-3">Rp3.000.000</p>
-              <ul class="list-disc ml-6 space-y-2 text-base text-gray-600">
-                <li>SPP 6 Bulan: Rp600.000</li>
-                <li>Makan 6 Bulan: Rp2.400.000</li>
-              </ul>
-              <p class="text-xs text-gray-500 mt-3">
-                * Jika membayar SPP dan biaya makan langsung untuk 6 bulan, total yang harus dibayar adalah Rp3.000.000.
-              </p>
-            </div>
+    <Section>
+      <div class="bg-gray-50 py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+          <!-- Header -->
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Rincian Biaya Pendidikan</h2>
+            <p class="text-lg text-gray-600">Pondok Pesantren & SMP Al Anwar</p>
           </div>
-      
-          <!-- Tab 2: Pondok dan SMP (Menggunakan Card) -->
-          <div class="hidden p-6 bg-white shadow-xl rounded-3xl" id="pondok-smp-tab-content">
-            <h2 class="text-2xl font-extrabold text-gray-900 mb-6">Biaya Pondok dan SMP</h2>
-            
-            <!-- Biaya Pendaftaran -->
-            <div class="mb-6">
-              <h3 class="text-xl font-bold text-gray-800 mb-3">Biaya Pendaftaran</h3>
-              <p class="text-lg text-gray-900 mb-4">Pondok: Rp2.360.000, SMP: Rp1.350.000</p>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Card: Pondok -->
-                <div class="bg-gray-50 rounded-xl p-4 shadow-md">
-                  <h4 class="text-xl font-semibold text-gray-800 mb-2">Pondok</h4>
-                  <ul class="list-disc ml-6 space-y-1 text-base text-gray-600">
-                    <li>Pendaftaran: Rp350.000</li>
-                    <li>Uang Gedung: Rp1.000.000</li>
-                    <li>Almamater: Rp250.000</li>
-                    <li>Seragam Putih: Rp100.000</li>
-                    <li>Peci/Kerudung: Rp60.000</li>
-                    <li>Al Anwar Bersholawat: Rp100.000</li>
-                    <li>Makan Bulan Pertama: Rp400.000</li>
-                    <li>SPP Madrasah Bulan Pertama: Rp100.000</li>
-                  </ul>
+    
+          <!-- Main Content -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- SMP Card -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900">Biaya SMP</h3>
+                <div class="mt-4 flex justify-center">
+                  <span class="text-4xl font-bold text-indigo-600">Rp1.350.000</span>
+                  <span class="text-gray-500 ml-2 self-end">pendaftaran awal</span>
                 </div>
-                <!-- Card: SMP -->
-                <div class="bg-gray-50 rounded-xl p-4 shadow-md">
-                  <h4 class="text-xl font-semibold text-gray-800 mb-2">SMP</h4>
-                  <ul class="list-disc ml-6 space-y-1 text-base text-gray-600">
-                    <li>Daftar: Rp100.000</li>
-                    <li>Uang Gedung: Rp1.000.000</li>
-                    <li>Biaya Ujian Semester 1: Rp100.000</li>
-                    <li>SPP Bulan Pertama: Rp150.000</li>
-                  </ul>
+              </div>
+    
+              <div class="space-y-4">
+                <div class="flex justify-between py-2 border-b">
+                  <span class="text-gray-600">Pendaftaran</span>
+                  <span class="font-semibold">Rp100.000</span>
+                </div>
+                <div class="flex justify-between py-2 border-b">
+                  <span class="text-gray-600">Uang Gedung</span>
+                  <span class="font-semibold">Rp1.000.000</span>
+                </div>
+                <div class="flex justify-between py-2 border-b">
+                  <span class="text-gray-600">Biaya Ujian Semester 1</span>
+                  <span class="font-semibold">Rp100.000</span>
+                </div>
+                <div class="flex justify-between py-2 border-b">
+                  <span class="text-gray-600">SPP Bulan Pertama</span>
+                  <span class="font-semibold">Rp150.000</span>
+                </div>
+              </div>
+    
+              <div class="mt-8 space-y-4 bg-gray-50 p-4 rounded-lg">
+                <div class="flex justify-between font-medium">
+                  <span>Biaya Bulanan (SPP)</span>
+                  <span class="text-indigo-600">Rp175.000</span>
+                </div>
+                <div class="flex justify-between font-medium">
+                  <span>Biaya per Semester</span>
+                  <span class="text-indigo-600">Rp300.000</span>
                 </div>
               </div>
             </div>
-            
-            <!-- Biaya Bulanan -->
-            <div class="mb-6">
-              <h3 class="text-xl font-bold text-gray-800 mb-3">Biaya Bulanan</h3>
-              <p class="text-lg text-gray-900 mb-4">Pondok: Rp500.000, SMP: Rp175.000</p>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Card: Pondok Bulanan -->
-                <div class="bg-gray-50 rounded-xl p-4 shadow-md">
-                  <h4 class="text-xl font-semibold text-gray-800 mb-2">Pondok</h4>
-                  <ul class="list-disc ml-6 space-y-1 text-base text-gray-600">
-                    <li>SPP Madrasah: Rp100.000</li>
-                    <li>Makan: Rp400.000</li>
-                  </ul>
-                </div>
-                <!-- Card: SMP Bulanan -->
-                <div class="bg-gray-50 rounded-xl p-4 shadow-md">
-                  <h4 class="text-xl font-semibold text-gray-800 mb-2">SMP</h4>
-                  <ul class="list-disc ml-6 space-y-1 text-base text-gray-600">
-                    <li>SPP Bulanan: Rp175.000</li>
-                  </ul>
+    
+            <!-- Pondok Card -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900">Biaya Pondok Pesantren</h3>
+                <div class="mt-4 flex justify-center">
+                  <span class="text-4xl font-bold text-emerald-600">Rp2.360.000</span>
+                  <span class="text-gray-500 ml-2 self-end">pendaftaran awal</span>
                 </div>
               </div>
-            </div>
-            
-            <!-- Biaya Per Semester -->
-            <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3">Biaya Per Semester</h3>
-              <p class="text-lg text-gray-900 mb-4">Pondok: Rp3.000.000, SMP: Rp200.000</p>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Card: Pondok Per Semester -->
-                <div class="bg-gray-50 rounded-xl p-4 shadow-md">
-                  <h4 class="text-xl font-semibold text-gray-800 mb-2">Pondok (Opsional)</h4>
-                  <ul class="list-disc ml-6 space-y-1 text-base text-gray-600">
-                    <li>SPP 6 Bulan: Rp600.000</li>
-                    <li>Makan 6 Bulan: Rp2.400.000</li>
-                  </ul>
-                  <p class="text-xs text-gray-500 mt-2">
-                    * Jika membayar SPP dan makan 6 bulan sekaligus.
-                  </p>
+    
+              <div class="space-y-4">
+                <div class="flex justify-between py-2 border-b">
+                  <span class="text-gray-600">Pendaftaran</span>
+                  <span class="font-semibold">Rp350.000</span>
                 </div>
-                <!-- Card: SMP Per Semester -->
-                <div class="bg-gray-50 rounded-xl p-4 shadow-md">
-                  <h4 class="text-xl font-semibold text-gray-800 mb-2">SMP</h4>
-                  <ul class="list-disc ml-6 space-y-1 text-base text-gray-600">
-                    <li>Ekstrakurikuler: Rp100.000</li>
-                    <li>Mutu &amp; Fasilitas: Rp100.000</li>
-                  </ul>
-                  <p class="text-xs text-gray-500 mt-2">
-                    * Jika membayar SPP 6 bulan sekaligus, total menjadi Rp1.050.000.
-                  </p>
+                <div class="flex justify-between py-2 border-b">
+                  <span class="text-gray-600">Uang Gedung</span>
+                  <span class="font-semibold">Rp1.000.000</span>
+                </div>
+                <div class="flex justify-between py-2 border-b">
+                  <span class="text-gray-600">Seragam & Perlengkapan</span>
+                  <span class="font-semibold">Rp410.000</span>
+                </div>
+                <div class="flex justify-between py-2 border-b">
+                  <span class="text-gray-600">Biaya Makan & SPP (Bulan Pertama)</span>
+                  <span class="font-semibold">Rp500.000</span>
+                </div>
+              </div>
+    
+              <div class="mt-8 space-y-4 bg-gray-50 p-4 rounded-lg">
+                <div class="flex justify-between font-medium">
+                  <span>Biaya Bulanan</span>
+                  <span class="text-emerald-600">Rp500.000</span>
+                </div>
+                <div class="flex justify-between font-medium">
+                  <span>Biaya per Semester</span>
+                  <span class="text-emerald-600">Rp3.000.000</span>
                 </div>
               </div>
             </div>
           </div>
-      
-          <!-- Tab 3: Ringkasan -->
-          <div class="hidden p-6 bg-white shadow-xl rounded-3xl" id="ringkasan-tab-content">
-            <h2 class="text-2xl font-extrabold text-gray-900 mb-6">Ringkasan Biaya</h2>
-            <div class="space-y-8">
-              <div class="p-6 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl shadow-lg">
-                <h3 class="text-2xl font-bold text-white mb-3">Total Biaya Pendaftaran</h3>
-                <p class="text-2xl font-bold text-white">Rp3.710.000</p>
+    
+          <!-- Total Summary -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Total Biaya Keseluruhan</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between py-3 border-b">
+                <span class="font-medium">Biaya Pendaftaran Awal (SMP + Pondok)</span>
+                <span class="font-bold text-xl text-indigo-600">Rp3.710.000</span>
               </div>
-              <div class="p-6 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl shadow-lg">
-                <h3 class="text-2xl font-bold text-white mb-3">Total Biaya Bulanan</h3>
-                <p class="text-2xl font-bold text-white">Rp675.000</p>
+              <div class="flex justify-between py-3 border-b">
+                <span class="font-medium">Biaya Bulanan (SMP + Pondok)</span>
+                <span class="font-bold text-xl text-indigo-600">Rp650.000</span>
+              </div>
+              <div class="flex justify-between py-3">
+                <span class="font-medium">Biaya per Semester</span>
+                <span class="font-bold text-xl text-indigo-600">Rp4.200.000</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </Section>
       
-        <!-- Script untuk Pergantian Tab -->
-        <script>
-          document.querySelectorAll('[data-tabs-target]').forEach(button => {
-            button.addEventListener('click', function () {
-              // Ubah setiap tombol ke keadaan tidak aktif
-              document.querySelectorAll('[data-tabs-target]').forEach(btn => {
-                btn.classList.remove('bg-gradient-to-r', 'from-blue-500', 'to-indigo-600', 'text-white', 'scale-105');
-                btn.classList.add('bg-gray-200', 'text-gray-800');
-              });
-              // Aktifkan tombol yang diklik
-              this.classList.remove('bg-gray-200', 'text-gray-800');
-              this.classList.add('bg-gradient-to-r', 'from-blue-500', 'to-indigo-600', 'text-white', 'scale-105');
-              // Sembunyikan seluruh konten tab
-              document.querySelectorAll('#custom-tab-content > div').forEach(tabContent => {
-                tabContent.classList.add('hidden');
-              });
-              // Tampilkan konten tab yang sesuai
-              const target = document.querySelector(this.dataset.tabsTarget);
-              target.classList.remove('hidden');
-            });
-          });
-          // Aktifkan tab "Pondok" secara default saat halaman dimuat
-          document.getElementById('pondok-tab').click();
-        </script>
-      </section>
       
     
       <section class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
