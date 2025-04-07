@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-gray-100">
     <!-- Hero Section -->
-    <section class="bg-white py-22 md:py-60 mb-12" style="background-image: url('foto_utama/bgppdb.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section class="py-22 md:py-60 mb-12" style="background-image: url('foto_utama/bgppdb.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="mx-auto max-w-7xl">
             <div class="relative">
                 <main class="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 lg:mx-56 xl:mt-28">
@@ -87,7 +87,7 @@
     </section>
     
     <Section>
-      <div class="bg-white py-16 px-4">
+      <div class="bg-gray-100 py-16 px-4">
         <div class="max-w-3xl mx-auto">
           <!-- Header -->
           <div class="text-center mb-12">
@@ -199,69 +199,268 @@
     </Section>
       
       
-    
-      <section class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
-        <h2 class="text-2xl font-bold mb-6 text-center text-indigo-700">Prosedur Pendaftaran Offline</h2>
-        <div class="relative">
-          <!-- Garis timeline dengan warna biru tua -->
-          <div class="border-l-4 border-indigo-700 absolute h-full left-1/2 transform -translate-x-1/2"></div>
-          <div class="space-y-8">
-            <!-- Step 1 -->
-            <div class="flex items-center w-full">
-              <div class="w-1/2 pr-8">
-                <div class="bg-indigo-100 p-4 rounded-lg shadow-md">
-                  <h3 class="font-bold text-lg text-indigo-800">Mengisi Formulir Pendaftaran</h3>
-                  <p class="text-indigo-700">Formulir tersedia di kantor pesantren atau website resmi. Wajib diisi oleh calon santri dan orang tua.</p>
-                </div>
+    <section class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg my-2">
+      <h2 class="text-xl font-bold mb-6 text-center text-indigo-600">Prosedur Pendaftaran Offline</h2>
+      
+      <div class="space-y-4">
+        <!-- Step 1 -->
+        <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
+          <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+            <span class="font-bold">1</span>
+          </div>
+          <div>
+            <h3 class="font-semibold text-indigo-700">Mengisi Formulir Pendaftaran</h3>
+            <p class="text-sm text-gray-600">Formulir tersedia di kantor pesantren atau website resmi. Wajib diisi oleh calon santri dan orang tua.</p>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
+          <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+            <span class="font-bold">2</span>
+          </div>
+          <div>
+            <h3 class="font-semibold text-indigo-700">Menyerahkan Berkas</h3>
+            <p class="text-sm text-gray-600">Fotokopi KTP orang tua, akta kelahiran, dan surat keterangan sehat. Berkas harus jelas dan lengkap.</p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
+          <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+            <span class="font-bold">3</span>
+          </div>
+          <div>
+            <h3 class="font-semibold text-indigo-700">Pembayaran Pendaftaran</h3>
+            <p class="text-sm text-gray-600">Bayar sesuai biaya pendaftaran yang telah diinformasikan. Bisa melalui transfer bank atau langsung di kantor pesantren.</p>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
+          <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+            <span class="font-bold">4</span>
+          </div>
+          <div>
+            <h3 class="font-semibold text-indigo-700">Informasi Keberangkatan</h3>
+            <p class="text-sm text-gray-600">Informasi akan diberikan melalui grup WhatsApp. Pastikan bergabung untuk mendapatkan update terkini.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-screen bg-gray-100 py-16">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-indigo-900 mb-3">Pertanyaan Umum</h2>
+          <p class="text-indigo-600 text-lg">Informasi penting seputar pendaftaran di Pondok Pesantren Al-Anwar</p>
+          <div class="w-24 h-1 bg-indigo-500 mx-auto mt-6 rounded-full"></div>
+        </div>
+        
+        <div class="space-y-5">
+          <!-- FAQ Item 1 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
+              <span class="font-semibold text-gray-800 text-lg">Apa perbedaan antara PPDB dan PPSB di Pondok Pesantren Al-Anwar?</span>
+              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
               </div>
-              <div class="w-1/2 flex justify-center relative">
-                <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <i class="fas fa-pencil-alt"></i>
-                </div>
+            </button>
+            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
+              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
+                <p class="text-gray-700 leading-relaxed">PPSB (Pendaftaran Santri Baru) adalah proses masuk ke lingkungan pondok, sedangkan PPDB (Penerimaan Peserta Didik Baru) adalah untuk masuk ke jenjang pendidikan formal. Mulai tahun 2025, santri yang mukim di Pondok Pesantren Al-Anwar diwajibkan untuk bersekolah di SMP Al-Anwar, kecuali bagi yang memilih tidak melanjutkan pendidikan formal.</p>
               </div>
             </div>
-            <!-- Step 2 -->
-            <div class="flex items-center w-full flex-row-reverse">
-              <div class="w-1/2 pl-8">
-                <div class="bg-indigo-100 p-4 rounded-lg shadow-md">
-                  <h3 class="font-bold text-lg text-indigo-800">Menyerahkan Berkas</h3>
-                  <p class="text-indigo-700">Fotokopi KTP orang tua, akta kelahiran, dan surat keterangan sehat. Berkas harus jelas dan lengkap.</p>
-                </div>
+          </div>
+          
+          <!-- FAQ Item 2 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
+              <span class="font-semibold text-gray-800 text-lg">Kapan pendaftaran PPDB dan PPSB dibuka?</span>
+              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
               </div>
-              <div class="w-1/2 flex justify-center relative">
-                <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <i class="fas fa-file-alt"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Step 3 -->
-            <div class="flex items-center w-full">
-              <div class="w-1/2 pr-8">
-                <div class="bg-indigo-100 p-4 rounded-lg shadow-md">
-                  <h3 class="font-bold text-lg text-indigo-800">Pembayaran Pendaftaran</h3>
-                  <p class="text-indigo-700">Bayar sesuai biaya pendaftaran yang telah diinformasikan. Bisa melalui transfer bank atau langsung di kantor pesantren.</p>
-                </div>
-              </div>
-              <div class="w-1/2 flex justify-center relative">
-                <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <i class="fas fa-money-bill-wave"></i>
-                </div>
+            </button>
+            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
+              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
+                <p class="text-gray-700 leading-relaxed">Pendaftaran biasanya dibuka mulai Januari hingga Juni setiap tahun, atau hingga kuota terpenuhi.</p>
               </div>
             </div>
-            <!-- Step 4 -->
-            <div class="flex items-center w-full flex-row-reverse">
-              <div class="w-1/2 pl-8">
-                <div class="bg-indigo-100 p-4 rounded-lg shadow-md">
-                  <h3 class="font-bold text-lg text-indigo-800">Informasi Keberangkatan</h3>
-                  <p class="text-indigo-700">Informasi akan diberikan melalui grup WhatsApp. Pastikan bergabung untuk mendapatkan update terkini.</p>
-                </div>
+          </div>
+          
+          <!-- FAQ Item 3 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
+              <span class="font-semibold text-gray-800 text-lg">Apa saja syarat pendaftaran yang harus disiapkan?</span>
+              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
               </div>
-              <div class="w-1/2 flex justify-center relative">
-                <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                  <i class="fas fa-info-circle"></i>
-                </div>
+            </button>
+            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
+              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Fotokopi Kartu NISN</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Fotokopi Ijazah dan SKHUN (bisa menyusul)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Fotokopi Akta Kelahiran</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Fotokopi Kartu Keluarga</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Dokumen lain dapat menyusul sesuai kebutuhan</span>
+                  </li>
+                </ul>
               </div>
             </div>
+          </div>
+          
+          <!-- FAQ Item 4 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
+              <span class="font-semibold text-gray-800 text-lg">Apakah ada proses seleksi untuk calon santri?</span>
+              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
+              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
+                <p class="text-gray-700 leading-relaxed">Untuk saat ini, tidak ada proses seleksi khusus. Semua calon santri secara otomatis akan diterima sebagai santri dan siswa SMP Al-Anwar, kecuali jika ada informasi tambahan di kemudian hari.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 5 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
+              <span class="font-semibold text-gray-800 text-lg">Apakah calon santri dari luar daerah boleh mendaftar?</span>
+              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
+              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
+                <p class="text-gray-700 leading-relaxed">Tentu saja. Tidak ada batasan wilayah asal, pendaftaran terbuka untuk seluruh calon santri dari berbagai daerah.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 6 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
+              <span class="font-semibold text-gray-800 text-lg">Apakah selain santri mukim boleh mendaftar SMP?</span>
+              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
+              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
+                <p class="text-gray-700 leading-relaxed">Tidak, SMP Al-Anwar hanya diperuntukkan santri yang mukim di pesantren.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 7 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
+              <span class="font-semibold text-gray-800 text-lg">Apakah santri boleh bersekolah di luar pesantren?</span>
+              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
+              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
+                <p class="text-gray-700 leading-relaxed">Tidak, santri yang mukim harus bersekolah di dalam pesantren.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        function toggleAccordion(button) {
+          // Toggle active class on the button
+          button.classList.toggle('active');
+          
+          // Toggle the arrow direction
+          const arrow = button.querySelector('svg').parentNode;
+          arrow.classList.toggle('rotate-180');
+          
+          // Toggle the content visibility
+          const content = button.nextElementSibling;
+          if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            setTimeout(() => {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }, 10);
+          } else {
+            content.style.maxHeight = "0px";
+            setTimeout(() => {
+              content.classList.add('hidden');
+            }, 300);
+          }
+        }
+      </script>
+    </section>
+
+      <section class="py-16 px-4 max-w-6xl mx-auto" id="faq">
+        <div class="mt-16 text-center">
+          <h4 class="text-xl font-semibold mb-4">Masih punya pertanyaan?</h4>
+          <p class="text-gray-600 mb-6">Jangan ragu untuk menghubungi tim PPDB SMP Al-Anwar</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+              </svg>
+              Hubungi Kami
+            </a>
+            <a href="#" class="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+              </svg>
+              Email
+            </a>
+            <a href="#" class="flex items-center px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
+                <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path>
+              </svg>
+              WhatsApp
+            </a>
           </div>
         </div>
       </section>
