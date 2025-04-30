@@ -1,0 +1,53 @@
+<nav class="fixed top-0 w-full bg-white py-3 shadow-md z-10">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="flex items-center justify-between">
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex flex-1 justify-start">
+          <!-- Left section empty as per original design -->
+        </div>
+        
+        <div class="flex justify-center md:justify-center">
+          <a href="#home" class="logo transition-transform hover:scale-105">
+            <img src="foto_utama/logo.png" alt="Logo Al-Anwar" class="h-10 md:h-14 w-auto">
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden flex items-center" id="mobile-menu-button">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        
+        <!-- Desktop Menu Items -->
+        <div class="hidden md:flex flex-1 justify-end">
+          <ul class="flex space-x-6 lg:space-x-10">
+            <li><a href="index.html" class="text-gray-800 hover:text-indigo-600 font-medium transition-colors duration-300 text-base">Home</a></li>
+            <li><a href="ppdb.html" class="text-gray-800 hover:text-indigo-600 font-medium transition-colors duration-300 text-base">Info PPDB</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu (hidden by default) -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <ul class="pt-2 pb-3 space-y-2">
+          <li><a href="index.html" class="block py-2 px-4 text-gray-800 hover:text-indigo-600 font-medium text-base border-b border-gray-100">Home</a></li>
+          <li><a href="ppdb.html" class="block py-2 px-4 text-gray-800 hover:text-indigo-600 font-medium text-base">Info PPDB</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    // Toggle mobile menu
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when window is resized to desktop size
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768) { // md breakpoint in Tailwind
+        document.getElementById('mobile-menu').classList.add('hidden');
+      }
+    });
+  </script>
