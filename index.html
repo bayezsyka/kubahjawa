@@ -16,172 +16,40 @@
 </head>
 <body class="bg-white overflow-x-hidden overflow-y-scroll scroll-smooth">
   <!-- Navbar -->
-  
-
   <div id="header"></div>
 
 
   <!-- Home Section -->
-  <section id="home" class="min-h-screen bg-cover bg-center flex items-center text-center mt-16" style="background-image: url('foto_utama/bg.png');">
-    <div class="absolute"></div>
-    <div class="container mx-auto px-8 py-16 text-white relative">
-      <h1 class="text-4xl text-start font-bold leading-tight text-shadow-md">Pondok Pesantren Al-Anwar</h1>
-      <div class="flex justify-start gap-4 mt-2">
-        <a href="#latest-news" class="bg-white text-sky-950 py-2 px-6 rounded-full text-base font-semibold shadow-lg hover:bg-cyan-700 transform hover:translate-y-1 transition-all">Pelajari Lebih Lanjut</a>
-        <a href="ppdb.html" class="bg-white text-sky-950 py-2 px-6 rounded-full text-base font-semibold shadow-lg hover:bg-cyan-700 transform hover:translate-y-1 transition-all">Informasi PPDB dan PPSB</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Latest News Section -->
-  <section id="latest-news" class="py-24 bg-gradient-to-b from-white to-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-teal-800 mb-12 text-center relative after:content-[''] after:absolute after:w-24 after:h-1 after:bg-teal-500 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:mt-4 pb-6">
-        Informasi Terbaru
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-        <!-- Card 1 -->
-        <div class="group bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300 hover:shadow-xl cursor-pointer">
-          <div class="overflow-hidden rounded-xl mb-4 relative">
-            <img src="foto_informasi/brosur.png" alt="Pendaftaran Santri" class="w-full h-auto object-cover rounded-xl">
-          </div>
-          <h3 class="text-teal-700 text-xl font-bold mb-3 group-hover:text-teal-600">Pendaftaran Santri</h3>
-          <p class="text-gray-600 leading-relaxed">Proses pendaftaran santri baru di Pondok Pesantren Al-Anwar Pakijangan telah dibuka. Segera daftarkan diri Anda untuk bergabung dan mendapatkan pendidikan yang berkualitas.</p>
-        </div>
-        <!-- Card 2 -->
-        <div class="group bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300 hover:shadow-xl cursor-pointer">
-          <div class="overflow-hidden rounded-xl mb-4 relative">
-            <img src="foto_informasi/ppdb.png" alt="PPDB SMP Al-Anwar" class="w-full h-auto object-cover rounded-xl">
-          </div>
-          <h3 class="text-teal-700 text-xl font-bold mb-3 group-hover:text-teal-600">PPDB SMP Al-Anwar 2025/2026</h3>
-          <p class="text-gray-600 leading-relaxed">Telah dibuka SMP Al-Anwar Tahun Ajaran 2025/2026. Untuk informasi lebih lanjut bisa klik tombol pada halaman atas.</p>
+  <section id="home" class="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat" style="background-image: url('foto_utama/bgppdb.png');">
+    <!-- Overlay for better text readability -->
+    <div class="absolute inset-0 bg-black/30"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+      <div class="max-w-2xl text-white">
+        <h1 class="text-3xl md:text-4xl lg:text-3xl font-bold leading-tight mb-4">
+          Pondok Pesantren Al-Anwar
+        </h1>
+        <p class="text-lg md:text-xl mb-6 opacity-90">
+          Membentuk generasi Qur'ani yang berakhlak mulia dan berwawasan luas
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="ppdb.html" class="inline-block bg-white text-sky-950 hover:bg-sky-100 py-3 px-8 rounded-full text-base font-semibold shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            Informasi SPMB dan PSB 2025
+          </a>
+          <!-- <a href="#tentang" class="inline-block border-2 border-white text-white hover:bg-white/10 py-3 px-8 rounded-full text-base font-semibold transition-all duration-300">
+            Tentang Kami
+          </a> -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modal Pop-up -->
-  <div id="modal" class="fixed inset-0 flex items-center justify-center bg-white bg-opacity-50 hidden z-50">
-    <div class="bg-white rounded-lg p-6 max-w-lg w-full relative">
-      <button id="modal-close" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
-        <i class="fas fa-times"></i>
-      </button>
-      <div class="modal-image mb-4"></div>
-      <h3 class="modal-title text-xl font-bold mb-4"></h3>
-      <div class="modal-body">
-        <p class="text-gray-700"></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Profile Section -->
-  <section id="profile" class="py-24 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-teal-800 mb-12 text-center relative after:content-[''] after:absolute after:w-24 after:h-1 after:bg-teal-500 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:mt-4 pb-6">Profil Pesantren</h2>
-      <div class="max-w-3xl mx-auto">
-        <p class="text-lg text-gray-700 mb-12 leading-relaxed">Pondok Pesantren Al-Anwar Pakijangan terletak di Jl. Raya Pakijangan Bulakamba No. 08, Brebes, Jawa Tengah, dengan kode pos 52253. Pesantren ini didirikan sekitar tahun 1950-an oleh KH. Anwar Mukhtar sebagai majelis terbuka yang dapat diikuti oleh siapa saja tanpa batasan.</p>
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-          <h3 class="text-2xl font-bold text-teal-700 mb-4">Keunggulan Kami</h3>
-          <p class="text-gray-600 leading-relaxed">Al-Anwar Pakijangan memiliki keunggulan dalam pengajaran ilmu nahwu, Tahfidz Al-Qur'an, serta pengembangan soft skill santri untuk menghadapi tantangan kehidupan modern, menjadikannya salah satu pesantren yang memadukan nilai-nilai klasik dan kemampuan adaptasi era kini.</p>
-        </div>
-      </div>
-    </div>
+  <section class="text-center text-xl font-bold py-12">
+    <h1>Sedang Diperbaiki</h1>
+    <h1>Silahkan Masuk Pada Halaman PPDB</h1>
   </section>
-
-  <!-- Visi dan Misi Section -->
-  <section id="vision-mission" class="py-24 bg-gradient-to-br from-teal-700 to-teal-900 text-white">
-    <div class="container mx-auto px-4 max-w-3xl">
-      <h2 class="text-4xl font-bold mb-12 text-center relative after:content-[''] after:absolute after:w-24 after:h-1 after:bg-yellow-400 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:mt-4 pb-6">Visi dan Misi</h2>
-      <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl mb-12 max-w-3xl mx-auto">
-        <h3 class="text-2xl font-bold text-yellow-300 mb-4">Kurikulum Cakra Wiyata</h3>
-        <div class="space-y-4 text-gray-100">
-          <p>Dalam upaya meningkatkan kualitas pendidikan dan menjawab tantangan zaman, Pesantren Al-Anwar Pakijangan mengadopsi kurikulum inovatif bernama "Cakra Wiyata." Nama ini mencerminkan semangat untuk menggerakkan roda pendidikan secara dinamis dan berkelanjutan.</p>
-          <p>Kurikulum ini dirancang untuk mempersiapkan santri menjadi individu yang cerdas, berkarakter, dan siap menghadapi dunia dengan penuh percaya diri.</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300">
-          <h3 class="text-xl font-bold text-teal-800 mb-4 flex items-center gap-2">
-            <i class="fas fa-eye text-2xl text-teal-600"></i>
-            Visi Pesantren
-          </h3>
-          <p class="text-gray-600 leading-relaxed">Pesantren Al-Anwar Pakijangan memiliki visi menjadi lembaga pendidikan yang mampu mengintegrasikan ilmu agama dan ilmu kehidupan dalam kerangka kurikulum. Kurikulum "Cakra Wiyata" bertujuan mencetak generasi santri yang berilmu, berkarakter, dan mampu bersaing.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300">
-          <h3 class="text-xl font-bold text-teal-800 mb-4 flex items-center gap-2">
-            <i class="fas fa-bullseye text-2xl text-teal-600"></i>
-            Misi Pesantren
-          </h3>
-          <ul class="space-y-3 text-gray-600">
-            <li class="flex items-start gap-2">
-              <span class="text-teal-500 mt-1">•</span>
-              Menerapkan pendidikan holistik yang mengintegrasikan nilai-nilai agama, keterampilan praktis, dan pengembangan karakter secara komprehensif.
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-teal-500 mt-1">•</span>
-              Mendorong kemandirian dan kreativitas santri melalui pengalaman belajar yang inovatif.
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-teal-500 mt-1">•</span>
-              Menyediakan pembelajaran yang berkelanjutan dan adaptif terhadap perkembangan zaman.
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-teal-500 mt-1">•</span>
-              Menciptakan lingkungan pendidikan yang positif untuk mendukung pertumbuhan intelektual, spiritual, dan emosional santri.
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-teal-500 mt-1">•</span>
-              Menumbuhkan jiwa kepemimpinan dan tanggung jawab sosial untuk membentuk santri menjadi pemimpin yang berkarakter dan peduli terhadap masyarakat.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-24">
-    <div class="container mx-auto text-center max-w-3xl">
-      <h2 class="text-3xl font-bold text-teal-800 mb-12">Keunggulan</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-xl shadow-xl text-center hover:translate-y-2 transition-transform">
-          <i class="fas fa-book-open text-teal-700 text-4xl mb-4"></i>
-          <h3 class="text-xl font-semibold text-teal-800 mb-4">Ilmu Nahwu Terapan</h3>
-          <p class="text-sm text-teal-900">Mempelajari ilmu nahwu secara mendalam dan praktis untuk meningkatkan pemahaman tentang bahasa Arab.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-xl text-center hover:translate-y-2 transition-transform">
-          <i class="fas fa-quran text-teal-700 text-4xl mb-4"></i>
-          <h3 class="text-xl font-semibold text-teal-800 mb-4">Program Tahfidz Quran</h3>
-          <p class="text-sm text-teal-900">Program unggulan untuk menghafal Al-Quran dengan bimbingan ustadz dan ustadzah yang berpengalaman.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-xl text-center hover:translate-y-2 transition-transform">
-          <i class="fas fa-chalkboard-teacher text-teal-700 text-4xl mb-4"></i>
-          <h3 class="text-xl font-semibold text-teal-800 mb-4">Pengembangan Soft Skill</h3>
-          <p class="text-sm text-teal-900">Fokus pada pengembangan kemampuan kepemimpinan, tanggung jawab, dan keterampilan hidup lainnya.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Contact Section -->
-  <section id="contact" class="py-24 bg-gray-50">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold text-teal-800 mb-12">Hubungi Kami</h2>
-      <div class="flex flex-wrap justify-center gap-8">
-        <div class="flex items-center bg-white p-6 rounded-lg shadow-xl transform hover:translate-y-2 transition-transform w-full sm:w-auto">
-          <i class="fas fa-map-marker-alt text-teal-700 text-2xl mr-4"></i>
-          <p><a href="https://g.co/kgs/1k4ZKnT" target="_blank" class="text-teal-800">Jl. Raya Pakijangan Nomer 08, Brebes, Jawa Tengah</a></p>
-        </div>
-        <div class="flex items-center bg-white p-6 rounded-lg shadow-xl transform hover:translate-y-2 transition-transform w-full sm:w-auto">
-          <i class="fas fa-phone-alt text-teal-700 text-2xl mr-4"></i>
-          <p><a href="https://wa.link/mhzz3v" class="text-teal-800">+62 851 6160 3362</a></p>
-        </div>
-        <div class="flex items-center bg-white p-6 rounded-lg shadow-xl transform hover:translate-y-2 transition-transform w-full sm:w-auto">
-          <i class="fas fa-envelope text-teal-700 text-2xl mr-4"></i>
-          <p><a href="mailto:kubahjawa@gmail.com" class="text-teal-800">kubahjawa@gmail.com</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+  <!-- Footer -->
   <div id="footer"></div>
 
 
