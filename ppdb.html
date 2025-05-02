@@ -2,511 +2,471 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PPDB & PPSB Al Anwar</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="assets/js/include.js"></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SPMB & PSB Al Anwar</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="assets/js/include.js"></script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+  
   <style>
     html.loading { visibility: hidden; }
-  </style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #0e7490, #0891b2);
+      -webkit-background-clip: text;
+      background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100">
-  <div id="header"></div>
+<body class="bg-gray-50">
+    <div id="header"></div>
 
     <!-- Hero Section -->
-    <section class="py-22 md:py-60 mb-12" style="background-image: url('foto_utama/bgppdb.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="mx-auto max-w-7xl">
-            <div class="relative">
-                <main class="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 lg:mx-56 xl:mt-28">
-                    <div class="sm:text-center lg:text-center">
-                        <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl md:text-4xl">
-                            <span class="block text-white">PPDB & PPSB 2025/2026</span>
-                            <span class="text-cyan-600">Pondok Pesantren Al-Anwar Pakijangan & SMP Al-Anwar</span>
-                        </h1>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
-                            <div class="rounded-md shadow">
-                                <a href="https://wa.me/6281917941714? text=Halo. Saya mau mendaftar." class="flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-600 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 md:px-10 md:py-4 md:text-lg">
-                                    Daftar Sekarang
-                                </a>
+    <section class="relative py-32 md:py-40 overflow-hidden" style="background: linear-gradient(rgba(8, 145, 178, 0.9), rgba(6, 95, 117, 0.9)), url('foto_utama/bgppdb.png'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black opacity-10"></div>
+            <div class="absolute bottom-0 left-0 right-0 top-auto h-20 bg-gradient-to-t from-gray-50 to-transparent"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    <span class="block">SPMB & PSB 2025/2026</span>
+                    <span class="text-cyan-200">Pondok Pesantren Al-Anwar Pakijangan & SMP Al-Anwar</span>
+                </h1>
+                <p class="text-xl text-cyan-100 max-w-3xl mx-auto mb-10">Bergabunglah dengan keluarga besar Al-Anwar untuk pendidikan yang berkualitas dan berkarakter</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/6281917941714?text=Halo.%20Saya%20mau%20mendaftar%20SPMB/PSB%20Al-Anwar" 
+                       class="px-8 py-4 bg-white text-cyan-700 font-semibold rounded-lg shadow-lg hover:bg-cyan-50 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        Daftar Sekarang
+                    </a>
+                    <a href="index.html" 
+                       class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-700 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-home"></i>
+                        Kembali ke Beranda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dokumen Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-cyan-800 mb-4">Persyaratan Pendaftaran</h2>
+                <div class="w-20 h-1 bg-cyan-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Dokumen 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-id-card text-3xl text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-gray-800 mb-2">Kartu Keluarga</h3>
+                    <p class="text-gray-600 text-center">Fotocopy Kartu Keluarga (2 lembar)</p>
+                </div>
+                
+                <!-- Dokumen 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-birthday-cake text-3xl text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-gray-800 mb-2">Akta Kelahiran</h3>
+                    <p class="text-gray-600 text-center">Fotocopy Akta Kelahiran (2 lembar)</p>
+                </div>
+                
+                <!-- Dokumen 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-graduation-cap text-3xl text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-gray-800 mb-2">Ijazah & SKHU</h3>
+                    <p class="text-gray-600 text-center">Fotocopy Ijazah & SKHU SD/MI (2 lembar)</p>
+                </div>
+                
+                <!-- Dokumen 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+                    <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-camera text-3xl text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-gray-800 mb-2">Pas Foto</h3>
+                    <p class="text-gray-600 text-center">Pas Foto 3×4 (4 lembar) & 2×3 (2 lembar)</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-6">* Fotocopy KTP Orang Tua dan Kartu KIP (jika ada) masing-masing 2 lembar</p>
+                <a href="#biaya" class="inline-block px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-all duration-300">
+                    Lihat Rincian Biaya <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biaya Section -->
+    <section id="biaya" class="py-20 bg-gradient-to-b from-cyan-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-cyan-800 mb-4">Investasi Pendidikan</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Biaya pendidikan yang terjangkau untuk masa depan yang berkualitas</p>
+                <div class="w-20 h-1 bg-cyan-600 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- SMP Card -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+                    <div class="bg-cyan-600 py-6 px-8">
+                        <h3 class="text-2xl font-bold text-white">SMP Al-Anwar</h3>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                            <span class="text-4xl font-bold text-cyan-600">Rp1.350.000</span>
+                            <span class="text-gray-500 ml-2">pendaftaran awal</span>
+                        </div>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Biaya Pendaftaran</span>
+                                <span class="font-semibold">Rp100.000</span>
                             </div>
-                            <div class="mt-3 sm:mt-0 sm:ml-3">
-                                <a href="index.html" class="flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-100 px-8 py-3 text-base font-medium text-cyan-600 hover:bg-cyan-200 md:px-10 md:py-4 md:text-lg">
-                                    Kembali ke Halaman Utama
-                                </a>
+                            <div class="flex justify-between py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Uang Gedung</span>
+                                <span class="font-semibold">Rp1.000.000</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Biaya Ujian Semester 1</span>
+                                <span class="font-semibold">Rp100.000</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b border-gray-100">
+                                <span class="text-gray-600">SPP Bulan Pertama</span>
+                                <span class="font-semibold">Rp150.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-cyan-50 rounded-lg p-4">
+                            <div class="flex justify-between font-medium mb-2">
+                                <span>Biaya Bulanan (SPP)</span>
+                                <span class="text-cyan-600">Rp150.000</span>
+                            </div>
+                            <div class="flex justify-between font-medium">
+                                <span>Daftar Ulang Kenaikan Kelas</span>
+                                <span class="text-cyan-600">Rp400.000</span>
                             </div>
                         </div>
                     </div>
-                </main>
+                </div>
+                
+                <!-- Pondok Card -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+                    <div class="bg-teal-600 py-6 px-8">
+                        <h3 class="text-2xl font-bold text-white">Pondok Pesantren</h3>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                            <span class="text-4xl font-bold text-teal-600">Rp2.360.000</span>
+                            <span class="text-gray-500 ml-2">pendaftaran awal</span>
+                        </div>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Biaya Pendaftaran</span>
+                                <span class="font-semibold">Rp350.000</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Uang Gedung</span>
+                                <span class="font-semibold">Rp1.000.000</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Seragam & Perlengkapan</span>
+                                <span class="font-semibold">Rp410.000</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Makan & SPP Bulan Pertama</span>
+                                <span class="font-semibold">Rp500.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-teal-50 rounded-lg p-4">
+                            <div class="flex justify-between font-medium mb-2">
+                                <span>Biaya Bulanan</span>
+                                <span class="text-teal-600">Rp500.000</span>
+                            </div>
+                            <div class="flex justify-between font-medium">
+                                <span>Per Semester (Jika digabung)</span>
+                                <span class="text-teal-600">Rp3.000.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Total Card -->
+            <div class="max-w-3xl mx-auto mt-12 bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+                <div class="bg-gradient-to-r from-cyan-600 to-teal-600 py-6 px-8">
+                    <h3 class="text-2xl font-bold text-white text-center">Total Investasi Pendidikan</h3>
+                </div>
+                <div class="p-8">
+                    <div class="space-y-4">
+                        <div class="flex justify-between py-3 border-b border-gray-100">
+                            <span class="text-gray-600 font-medium">Pendaftaran Awal (SMP + Pondok)</span>
+                            <span class="font-bold text-xl text-cyan-600">Rp3.710.000</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b border-gray-100">
+                            <span class="text-gray-600 font-medium">Biaya Bulanan (SMP + Pondok)</span>
+                            <span class="font-bold text-xl text-cyan-600">Rp650.000</span>
+                        </div>
+                        <div class="flex justify-between py-3">
+                            <span class="text-gray-600 font-medium">Daftar Ulang Kenaikan Kelas SMP</span>
+                            <span class="font-bold text-xl text-cyan-600">Rp400.000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-cyan-50 rounded-lg p-4">
+                        <p class="text-center text-cyan-700 font-medium">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Pembayaran dapat dilakukan secara bertahap dengan ketentuan yang berlaku
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    
-
-    <section>
-      <div class="px-auto mx-8">
-        <h1 class="text-4xl font-bold text-center pt-11 text-teal-700 pb-4">
-          Apa yang harus disiapkan?
-        </h1>
-        <div class="bg-gradient-to-r from-teal-700 to-cyan-600 p-8 rounded-xl text-white shadow-lg max-w-3xl mx-auto mt-8">
-          <h2 class="text-3xl font-semibold mb-4 text-center">Dokumen yang Diperlukan</h2>
-          <p class="text-center text-lg mb-6">Silakan siapkan dokumen berikut untuk pendaftaran:</p>
-          
-          <div class="space-y-6">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 flex items-center justify-center bg-white text-teal-700 rounded-full shadow-md">
-                <i class="fas fa-users text-2xl"></i>
-              </div>
-              <span class="text-lg">Fotocopy Kartu Keluarga (2 lembar)</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 flex items-center justify-center bg-white text-teal-700 rounded-full shadow-md">
-                <i class="fas fa-baby text-2xl"></i>
-              </div>
-              <span class="text-lg">Fotocopy Akta Kelahiran (2 lembar)</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 flex items-center justify-center bg-white text-teal-700 rounded-full shadow-md">
-                <i class="fas fa-graduation-cap text-2xl"></i>
-              </div>
-              <span class="text-lg">Fotocopy Ijazah &amp; SKHU SD/MI (2 lembar)</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 flex items-center justify-center bg-white text-teal-700 rounded-full shadow-md">
-                <i class="fas fa-id-card text-2xl"></i>
-              </div>
-              <span class="text-lg">Fotocopy NISN (2 lembar)</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 flex items-center justify-center bg-white text-teal-700 rounded-full shadow-md">
-                <i class="fas fa-id-badge text-2xl"></i>
-              </div>
-              <span class="text-lg">Fotocopy KTP Orang Tua (2 lembar)</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 flex items-center justify-center bg-white text-teal-700 rounded-full shadow-md">
-                <i class="fas fa-credit-card text-2xl"></i>
-              </div>
-              <span class="text-lg">Fotocopy Kartu KIP (2 lembar)</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 flex items-center justify-center bg-white text-teal-700 rounded-full shadow-md">
-                <i class="fas fa-camera-retro text-2xl"></i>
-              </div>
-              <span class="text-lg">Pas Foto Ukuran 3×4 (4 lembar)</span>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 flex items-center justify-center bg-white text-teal-700 rounded-full shadow-md">
-                <i class="fas fa-camera text-2xl"></i>
-              </div>
-              <span class="text-lg">Pas Foto Ukuran 2×3 (2 lembar)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-    <Section>
-      <div class="bg-gray-100 py-16 px-4">
-        <div class="max-w-3xl mx-auto">
-          <!-- Header -->
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Rincian Biaya Pendidikan</h2>
-            <p class="text-lg text-gray-600">Pondok Pesantren & SMP Al Anwar</p>
-          </div>
-    
-          <!-- Main Content -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <!-- SMP Card -->
-            <div class="bg-white rounded-xl shadow-lg p-8">
-              <div class="text-center mb-6">
-                <h3 class="text-2xl font-bold text-gray-900">Biaya SMP</h3>
-                <div class="mt-4 flex justify-center">
-                  <span class="text-4xl font-bold text-indigo-600">Rp1.350.000</span>
-                  <span class="text-gray-500 ml-2 self-end">pendaftaran awal</span>
-                </div>
-              </div>
-    
-              <div class="space-y-4">
-                <div class="flex justify-between py-2 border-b">
-                  <span class="text-gray-600">Pendaftaran</span>
-                  <span class="font-semibold">Rp100.000</span>
-                </div>
-                <div class="flex justify-between py-2 border-b">
-                  <span class="text-gray-600">Uang Gedung</span>
-                  <span class="font-semibold">Rp1.000.000</span>
-                </div>
-                <div class="flex justify-between py-2 border-b">
-                  <span class="text-gray-600">Biaya Ujian Semester 1</span>
-                  <span class="font-semibold">Rp100.000</span>
-                </div>
-                <div class="flex justify-between py-2 border-b">
-                  <span class="text-gray-600">SPP Bulan Pertama</span>
-                  <span class="font-semibold">Rp150.000</span>
-                </div>
-              </div>
-    
-              <div class="mt-8 space-y-4 bg-gray-50 p-4 rounded-lg">
-                <div class="flex justify-between font-medium">
-                  <span>Biaya Bulanan (SPP)</span>
-                  <span class="text-indigo-600">Rp150.000</span>
-                </div>
-                <div class="flex justify-between font-medium">
-                  <span>Biaya Daftar Ulang Kenaikan Kelas</span>
-                  <span class="text-indigo-600">Rp400.000</span>
-                </div>
-              </div>
-            </div>
-    
-            <!-- Pondok Card -->
-            <div class="bg-white rounded-xl shadow-lg p-8">
-              <div class="text-center mb-6">
-                <h3 class="text-2xl font-bold text-gray-900">Biaya Pondok Pesantren</h3>
-                <div class="mt-4 flex justify-center">
-                  <span class="text-4xl font-bold text-emerald-600">Rp2.360.000</span>
-                  <span class="text-gray-500 ml-2 self-end">pendaftaran awal</span>
-                </div>
-              </div>
-    
-              <div class="space-y-4">
-                <div class="flex justify-between py-2 border-b">
-                  <span class="text-gray-600">Pendaftaran</span>
-                  <span class="font-semibold">Rp350.000</span>
-                </div>
-                <div class="flex justify-between py-2 border-b">
-                  <span class="text-gray-600">Uang Gedung</span>
-                  <span class="font-semibold">Rp1.000.000</span>
-                </div>
-                <div class="flex justify-between py-2 border-b">
-                  <span class="text-gray-600">Seragam & Perlengkapan</span>
-                  <span class="font-semibold">Rp410.000</span>
-                </div>
-                <div class="flex justify-between py-2 border-b">
-                  <span class="text-gray-600">Biaya Makan & SPP (Bulan Pertama)</span>
-                  <span class="font-semibold">Rp500.000</span>
-                </div>
-              </div>
-    
-              <div class="mt-8 space-y-4 bg-gray-50 p-4 rounded-lg">
-                <div class="flex justify-between font-medium">
-                  <span>Biaya Bulanan</span>
-                  <span class="text-emerald-600">Rp500.000</span>
-                </div>
-                <div class="flex justify-between font-medium">
-                  <span>Biaya per Semester (Apabila 1 Semester Digabung)</span>
-                  <span class="text-emerald-600">Rp3.000.000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Total Summary -->
-          <div class="bg-white rounded-xl shadow-lg p-8">
-            <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Total Biaya Keseluruhan</h3>
-            <div class="space-y-4">
-              <div class="flex justify-between py-3 border-b">
-                <span class="font-medium">Biaya Pendaftaran Awal (SMP + Pondok)</span>
-                <span class="font-bold text-xl text-indigo-600">Rp3.710.000</span>
-              </div>
-              <div class="flex justify-between py-3 border-b">
-                <span class="font-medium">Biaya Bulanan (SMP + Pondok)</span>
-                <span class="font-bold text-xl text-indigo-600">Rp650.000</span>
-              </div>
-              <div class="flex justify-between py-3 border-b">
-                <span class="font-medium">Biaya Daftar Ulang Kenaikan Kelas SMP</span>
-                <span class="font-bold text-xl text-indigo-600">Rp400.000</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Section>
-        
-      
-      
-    <section class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg my-2">
-      <h2 class="text-xl font-bold mb-6 text-center text-indigo-600">Prosedur Pendaftaran Offline</h2>
-      
-      <div class="space-y-4">
-        <!-- Step 1 -->
-        <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
-          <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-            <span class="font-bold">1</span>
-          </div>
-          <div>
-            <h3 class="font-semibold text-indigo-700">Mengisi Formulir Pendaftaran</h3>
-            <p class="text-sm text-gray-600">Formulir tersedia di kantor pesantren atau website resmi. Wajib diisi oleh calon santri dan orang tua.</p>
-          </div>
-        </div>
-        
-        <!-- Step 2 -->
-        <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
-          <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-            <span class="font-bold">2</span>
-          </div>
-          <div>
-            <h3 class="font-semibold text-indigo-700">Menyerahkan Berkas</h3>
-            <p class="text-sm text-gray-600">Fotokopi KTP orang tua, akta kelahiran, dan surat keterangan sehat. Berkas harus jelas dan lengkap.</p>
-          </div>
-        </div>
-        
-        <!-- Step 3 -->
-        <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
-          <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-            <span class="font-bold">3</span>
-          </div>
-          <div>
-            <h3 class="font-semibold text-indigo-700">Pembayaran Pendaftaran</h3>
-            <p class="text-sm text-gray-600">Bayar sesuai biaya pendaftaran yang telah diinformasikan. Bisa melalui transfer bank atau langsung di kantor pesantren.</p>
-          </div>
-        </div>
-        
-        <!-- Step 4 -->
-        <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
-          <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-            <span class="font-bold">4</span>
-          </div>
-          <div>
-            <h3 class="font-semibold text-indigo-700">Informasi Keberangkatan</h3>
-            <p class="text-sm text-gray-600">Informasi akan diberikan melalui grup WhatsApp. Pastikan bergabung untuk mendapatkan update terkini.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="min-h-screen bg-gray-100 py-16">
-      <div class="max-w-3xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-indigo-900 mb-3">Pertanyaan Umum</h2>
-          <p class="text-indigo-600 text-lg">Informasi penting seputar pendaftaran di Pondok Pesantren Al-Anwar</p>
-          <div class="w-24 h-1 bg-indigo-500 mx-auto mt-6 rounded-full"></div>
-        </div>
-        
-        <div class="space-y-5">
-          <!-- FAQ Item 1 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
-              <span class="font-semibold text-gray-800 text-lg">Apa perbedaan antara PPDB dan PPSB di Pondok Pesantren Al-Anwar?</span>
-              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
-                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </div>
-            </button>
-            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
-              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
-                <p class="text-gray-700 leading-relaxed">PPSB (Pendaftaran Santri Baru) adalah proses masuk ke lingkungan pondok, sedangkan PPDB (Penerimaan Peserta Didik Baru) adalah untuk masuk ke jenjang pendidikan formal. Mulai tahun 2025, santri yang mukim di Pondok Pesantren Al-Anwar diwajibkan untuk bersekolah di SMP Al-Anwar, kecuali bagi yang memilih tidak melanjutkan pendidikan formal.</p>
-              </div>
-            </div>
+    <!-- Prosedur Section -->
+    <section class="py-12 md:py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-12 md:mb-16">
+              <h2 class="text-2xl md:text-4xl font-bold text-cyan-800 mb-3">Prosedur Pendaftaran</h2>
+              <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">Ikuti 4 langkah mudah bergabung dengan Al-Anwar</p>
+              <div class="w-16 md:w-20 h-1 bg-cyan-600 mx-auto mt-4 md:mt-6"></div>
           </div>
           
-          <!-- FAQ Item 2 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
-              <span class="font-semibold text-gray-800 text-lg">Kapan pendaftaran PPDB dan PPSB dibuka?</span>
-              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
-                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
+          <!-- Timeline Responsive -->
+          <div class="max-w-4xl mx-auto">
+              <div class="space-y-8 md:space-y-12">
+                  <!-- Step 1 -->
+                  <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-0">
+                      <div class="md:w-1/2 md:pr-8 md:text-right order-1">
+                          <div class="bg-cyan-50 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                              <h3 class="text-lg md:text-xl font-bold text-cyan-700 mb-2 flex items-center">
+                                  <span class="md:hidden w-8 h-8 bg-cyan-600 rounded-full text-white flex items-center justify-center mr-3">1</span>
+                                  Mengisi Formulir
+                              </h3>
+                              <p class="text-gray-600 text-sm md:text-base">Formulir tersedia di kantor atau website resmi. Wajib diisi oleh calon santri dan orang tua.</p>
+                          </div>
+                      </div>
+                      <div class="hidden md:flex w-12 h-12 rounded-full bg-cyan-600 border-4 border-white items-center justify-center z-10 mx-auto order-2">
+                          <span class="text-white font-bold">1</span>
+                      </div>
+                      <div class="md:w-1/2 order-3 md:order-3"></div>
+                  </div>
+                  
+                  <!-- Step 2 -->
+                  <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-0">
+                      <div class="md:w-1/2 order-3"></div>
+                      <div class="hidden md:flex w-12 h-12 rounded-full bg-teal-600 border-4 border-white items-center justify-center z-10 mx-auto order-2">
+                          <span class="text-white font-bold">2</span>
+                      </div>
+                      <div class="md:w-1/2 md:pl-8 order-1 md:order-3">
+                          <div class="bg-teal-50 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                              <h3 class="text-lg md:text-xl font-bold text-teal-700 mb-2 flex items-center">
+                                  <span class="md:hidden w-8 h-8 bg-teal-600 rounded-full text-white flex items-center justify-center mr-3">2</span>
+                                  Menyerahkan Berkas
+                              </h3>
+                              <p class="text-gray-600 text-sm md:text-base">Fotokopi KTP orang tua, akta kelahiran, dan surat keterangan sehat. Berkas harus jelas dan lengkap.</p>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Step 3 -->
+                  <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-0">
+                      <div class="md:w-1/2 md:pr-8 md:text-right order-1">
+                          <div class="bg-cyan-50 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                              <h3 class="text-lg md:text-xl font-bold text-cyan-700 mb-2 flex items-center">
+                                  <span class="md:hidden w-8 h-8 bg-cyan-600 rounded-full text-white flex items-center justify-center mr-3">3</span>
+                                  Pembayaran
+                              </h3>
+                              <p class="text-gray-600 text-sm md:text-base">Bayar biaya pendaftaran via transfer bank atau langsung di kantor pesantren.</p>
+                          </div>
+                      </div>
+                      <div class="hidden md:flex w-12 h-12 rounded-full bg-cyan-600 border-4 border-white items-center justify-center z-10 mx-auto order-2">
+                          <span class="text-white font-bold">3</span>
+                      </div>
+                      <div class="md:w-1/2 order-3"></div>
+                  </div>
+                  
+                  <!-- Step 4 -->
+                  <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-0">
+                      <div class="md:w-1/2 order-3"></div>
+                      <div class="hidden md:flex w-12 h-12 rounded-full bg-teal-600 border-4 border-white items-center justify-center z-10 mx-auto order-2">
+                          <span class="text-white font-bold">4</span>
+                      </div>
+                      <div class="md:w-1/2 md:pl-8 order-1 md:order-3">
+                          <div class="bg-teal-50 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                              <h3 class="text-lg md:text-xl font-bold text-teal-700 mb-2 flex items-center">
+                                  <span class="md:hidden w-8 h-8 bg-teal-600 rounded-full text-white flex items-center justify-center mr-3">4</span>
+                                  Informasi Keberangkatan
+                              </h3>
+                              <p class="text-gray-600 text-sm md:text-base">Update melalui grup WhatsApp. Pastikan bergabung untuk info terkini.</p>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </button>
-            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
-              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
-                <p class="text-gray-700 leading-relaxed">Pendaftaran biasanya dibuka mulai Januari hingga Juni setiap tahun, atau hingga kuota terpenuhi.</p>
+              
+              <div class="mt-12 md:mt-16 text-center">
+                  <a href="https://wa.me/6281917941714" class="inline-block px-6 py-3 md:px-8 md:py-4 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                      <i class="fab fa-whatsapp mr-2"></i> Hubungi Panitia
+                  </a>
               </div>
-            </div>
           </div>
-          
-          <!-- FAQ Item 3 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
-              <span class="font-semibold text-gray-800 text-lg">Apa saja syarat pendaftaran yang harus disiapkan?</span>
-              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
-                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </div>
-            </button>
-            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
-              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
-                <ul class="space-y-2 text-gray-700">
-                  <li class="flex items-start">
-                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span>Fotokopi Kartu NISN</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span>Fotokopi Ijazah dan SKHUN (bisa menyusul)</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span>Fotokopi Akta Kelahiran</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span>Fotokopi Kartu Keluarga</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="w-5 h-5 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span>Dokumen lain dapat menyusul sesuai kebutuhan</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <!-- FAQ Item 4 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
-              <span class="font-semibold text-gray-800 text-lg">Apakah ada proses seleksi untuk calon santri?</span>
-              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
-                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </div>
-            </button>
-            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
-              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
-                <p class="text-gray-700 leading-relaxed">Untuk saat ini, tidak ada proses seleksi khusus. Semua calon santri secara otomatis akan diterima sebagai santri dan siswa SMP Al-Anwar, kecuali jika ada informasi tambahan di kemudian hari.</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- FAQ Item 5 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
-              <span class="font-semibold text-gray-800 text-lg">Apakah calon santri dari luar daerah boleh mendaftar?</span>
-              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
-                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </div>
-            </button>
-            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
-              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
-                <p class="text-gray-700 leading-relaxed">Tentu saja. Tidak ada batasan wilayah asal, pendaftaran terbuka untuk seluruh calon santri dari berbagai daerah.</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- FAQ Item 6 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
-              <span class="font-semibold text-gray-800 text-lg">Apakah selain santri mukim boleh mendaftar SMP?</span>
-              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
-                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </div>
-            </button>
-            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
-              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
-                <p class="text-gray-700 leading-relaxed">Tidak, SMP Al-Anwar hanya diperuntukkan santri yang mukim di pesantren.</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- FAQ Item 7 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <button class="flex justify-between items-center w-full px-8 py-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
-              <span class="font-semibold text-gray-800 text-lg">Apakah santri boleh bersekolah di luar pesantren?</span>
-              <div class="bg-indigo-100 rounded-full p-2 transform transition-transform duration-300">
-                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </div>
-            </button>
-            <div class="hidden max-h-0 overflow-hidden transition-all duration-300">
-              <div class="px-8 py-6 bg-gradient-to-r from-white to-indigo-50 border-t border-indigo-100">
-                <p class="text-gray-700 leading-relaxed">Tidak, santri yang mukim harus bersekolah di dalam pesantren.</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-      
-      <script>
-        function toggleAccordion(button) {
-          // Toggle active class on the button
-          button.classList.toggle('active');
-          
-          // Toggle the arrow direction
-          const arrow = button.querySelector('svg').parentNode;
-          arrow.classList.toggle('rotate-180');
-          
-          // Toggle the content visibility
-          const content = button.nextElementSibling;
-          if (content.classList.contains('hidden')) {
-            content.classList.remove('hidden');
-            setTimeout(() => {
-              content.style.maxHeight = content.scrollHeight + "px";
-            }, 10);
-          } else {
-            content.style.maxHeight = "0px";
-            setTimeout(() => {
-              content.classList.add('hidden');
-            }, 300);
-          }
-        }
-      </script>
+  </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-cyan-800 mb-4">Pertanyaan Umum</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Informasi penting seputar pendaftaran di Al-Anwar</p>
+                <div class="w-20 h-1 bg-cyan-600 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">Apa perbedaan antara SPMB dan PSB di Pondok Pesantren Al-Anwar?</span>
+                        <i class="fas fa-chevron-down text-cyan-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 pt-0">
+                        <p class="text-gray-700">SPMB (Sistem Penerimaan Murid Baru) adalah proses masuk ke jenjang pendidikan formal (SMP Al-Anwar), sedangkan PSB (Penerimaan Santri Baru) adalah untuk masuk ke lingkungan pondok pesantren. Mulai tahun 2025, santri yang mukim di Pondok Pesantren Al-Anwar diwajibkan untuk bersekolah di SMP Al-Anwar, kecuali bagi yang memilih tidak melanjutkan pendidikan formal.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">Kapan pendaftaran SPMB dan PSB dibuka?</span>
+                        <i class="fas fa-chevron-down text-cyan-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 pt-0">
+                        <p class="text-gray-700">Pendaftaran biasanya dibuka mulai Januari hingga Juni setiap tahun, atau hingga kuota terpenuhi.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">Apakah ada proses seleksi untuk calon santri?</span>
+                        <i class="fas fa-chevron-down text-cyan-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 pt-0">
+                        <p class="text-gray-700">Untuk saat ini, tidak ada proses seleksi khusus. Semua calon santri secara otomatis akan diterima sebagai santri dan siswa SMP Al-Anwar, kecuali jika ada informasi tambahan di kemudian hari.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">Apakah calon santri dari luar daerah boleh mendaftar?</span>
+                        <i class="fas fa-chevron-down text-cyan-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 pt-0">
+                        <p class="text-gray-700">Tentu saja. Tidak ada batasan wilayah asal, pendaftaran terbuka untuk seluruh calon santri dari berbagai daerah.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">Apakah santri boleh bersekolah di luar pesantren?</span>
+                        <i class="fas fa-chevron-down text-cyan-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 pt-0">
+                        <p class="text-gray-700">Tidak, santri yang mukim harus bersekolah di dalam pesantren.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <h4 class="text-xl font-semibold mb-4">Masih ada pertanyaan?</h4>
+                <p class="text-gray-600 mb-6">Tim penerimaan santri baru siap membantu Anda</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://wa.me/6281917941714" class="flex items-center px-6 py-3 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition-all">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> WhatsApp
+                    </a>
+                    <a href="tel:+6281917941714" class="flex items-center px-6 py-3 bg-cyan-600 text-white rounded-lg shadow hover:bg-cyan-700 transition-all">
+                        <i class="fas fa-phone-alt text-xl mr-2"></i> Telepon
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-      <section class="py-16 px-4 max-w-6xl mx-auto" id="faq">
-        <div class="mt-16 text-center">
-          <h4 class="text-xl font-semibold mb-4">Masih punya pertanyaan?</h4>
-          <p class="text-gray-600 mb-6">Jangan ragu untuk menghubungi tim PPDB SMP Al-Anwar</p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://wa.me/6285161603362" class="flex items-center px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all">
-              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
-                <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path>
-              </svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-      
-      <div id="footer"></div>
-      <script src="assets/js/include.js"></script>
-      
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <div id="footer"></div>
+    
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js"></script>
-     
+    <script src="assets/js/include.js"></script>
+    <script src="main.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const btn  = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-    
-        // Toggle menu ketika tombol diklik
-        btn.addEventListener('click', () => {
-          menu.classList.toggle('hidden');
-        });
-    
-        // Pastikan menu tersembunyi lagi jika di‐resize ke desktop
-        window.addEventListener('resize', () => {
-          if (window.innerWidth >= 768) {
-            menu.classList.add('hidden');
-          }
-        });
+      const btn  = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+  
+      // Toggle menu ketika tombol diklik
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
       });
+  
+      // Pastikan menu tersembunyi lagi jika di‐resize ke desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          menu.classList.add('hidden');
+        }
+      });
+    });
     </script>
-</body>
 
+</body>
 </html>

@@ -122,3 +122,130 @@ newsCards.forEach(card => {
         openModal(title, description, imageSrc);
     });
 });
+
+ // Saat setiap card (dengan class .group) diklik, modal akan muncul
+ document.querySelectorAll('#latest-news .group').forEach(card => {
+    card.addEventListener('click', function () {
+      let modal = document.getElementById('modal');
+      // Ambil judul dari elemen <h3> di dalam card
+      let title = this.querySelector('h3').innerHTML;
+      modal.querySelector('.modal-title').innerHTML = title;
+      // Ambil deskripsi dari elemen <p> di dalam card
+      let description = this.querySelector('p').innerHTML;
+      modal.querySelector('.modal-body p').innerHTML = description;
+      // Jika terdapat gambar, ambil elemen <img> dan masukkan ke modal
+      let imgElem = this.querySelector('img');
+      if (imgElem) {
+        modal.querySelector('.modal-image').innerHTML = imgElem.outerHTML;
+      } else {
+        modal.querySelector('.modal-image').innerHTML = '';
+      }
+      // Tampilkan modal
+      modal.classList.remove('hidden');
+    });
+  });
+
+  // Tutup modal ketika tombol close diklik
+  document.getElementById('modal-close').addEventListener('click', function () {
+    document.getElementById('modal').classList.add('hidden');
+  });
+
+  // Tutup modal ketika klik di luar konten modal
+  document.getElementById('modal').addEventListener('click', function (e) {
+    if (e.target === this) {
+      this.classList.add('hidden');
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn  = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    // Toggle menu ketika tombol diklik
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Pastikan menu tersembunyi lagi jika di‐resize ke desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        menu.classList.add('hidden');
+      }
+    });
+  });
+
+    // FAQ Toggle
+    function toggleFAQ(button) {
+        const faqItem = button.parentElement;
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        // Toggle content
+        content.classList.toggle('hidden');
+        
+        // Rotate icon
+        icon.classList.toggle('transform');
+        icon.classList.toggle('rotate-180');
+        
+        // Close other open FAQs
+        document.querySelectorAll('.bg-white.rounded-xl').forEach(item => {
+            if (item !== faqItem && !item.querySelector('.hidden')) {
+                item.querySelector('.hidden').classList.add('hidden');
+                item.querySelector('i').classList.remove('transform', 'rotate-180');
+            }
+        });
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Animation on scroll
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.card-hover, .floating');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    }
+    
+    // Set initial state for animated elements
+    document.querySelectorAll('.card-hover, .floating').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    
+    // Run animation on load and scroll
+    window.addEventListener('load', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn  = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+    
+        // Toggle menu ketika tombol diklik
+        btn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+        });
+    
+        // Pastikan menu tersembunyi lagi jika di‐resize ke desktop
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768) {
+            menu.classList.add('hidden');
+          }
+        });
+      });
