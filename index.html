@@ -4,111 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pondok Pesantren Al-Anwar Pakijangan</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <script src="assets/js/include.js"></script>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <!-- Load Flowbite from local node_modules -->
-  <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
-  
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     html.loading { visibility: hidden; }
+    body { font-family: 'Poppins', sans-serif; }
   </style>
 </head>
-<body class="bg-white overflow-x-hidden overflow-y-scroll scroll-smooth">
-  <!-- Navbar -->
-  <div id="header"></div>
-
-
-  <!-- Home Section -->
-  <section id="home" class="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat" style="background-image: url('foto_utama/bgppdb.png');">
-    <!-- Overlay for better text readability -->
-    <div class="absolute inset-0 bg-black/30"></div>
-    
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-      <div class="max-w-2xl text-white">
-        <h1 class="text-3xl md:text-4xl lg:text-3xl font-bold leading-tight mb-4">
-          Pondok Pesantren Al-Anwar
-        </h1>
-        <p class="text-lg md:text-xl mb-6 opacity-90">
-          Membentuk generasi Qur'ani yang berakhlak mulia dan berwawasan luas
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="ppdb.html" class="inline-block bg-white text-sky-950 hover:bg-sky-100 py-3 px-8 rounded-full text-base font-semibold shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            Informasi SPMB dan PSB 2025
-          </a>
-          <!-- <a href="#tentang" class="inline-block border-2 border-white text-white hover:bg-white/10 py-3 px-8 rounded-full text-base font-semibold transition-all duration-300">
-            Tentang Kami
-          </a> -->
-        </div>
+<body class="bg-gray-50 overflow-x-hidden">
+  <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image:url('foto_utama/bgppdb.png')">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 text-center text-white space-y-6">
+      <h1 class="text-3xl md:text-5xl font-bold">Pondok Pesantren Al-Anwar</h1>
+      <div class="flex justify-center gap-4">
+        <a href="ppdb.html" class="px-6 py-3 bg-white text-cyan-700 rounded-full font-semibold shadow hover:bg-cyan-50">Informasi PPDB</a>
+        <a href="https://wa.me/6281917941714" class="px-6 py-3 bg-cyan-600 text-white rounded-full font-semibold shadow hover:bg-cyan-700"><i class="fab fa-whatsapp mr-2"></i>Hubungi Kami</a>
       </div>
     </div>
   </section>
-
-  <section class="text-center text-xl font-bold py-12">
-    <h1>Sedang Diperbaiki</h1>
-    <h1>Silahkan Masuk Pada Halaman PPDB</h1>
-  </section>
-  
-  <!-- Footer -->
-  <div id="footer"></div>
-
-
-
-  <!-- Script Modal Pop-up untuk Latest News -->
-  <script>
-    // Saat setiap card (dengan class .group) diklik, modal akan muncul
-    document.querySelectorAll('#latest-news .group').forEach(card => {
-      card.addEventListener('click', function () {
-        let modal = document.getElementById('modal');
-        // Ambil judul dari elemen <h3> di dalam card
-        let title = this.querySelector('h3').innerHTML;
-        modal.querySelector('.modal-title').innerHTML = title;
-        // Ambil deskripsi dari elemen <p> di dalam card
-        let description = this.querySelector('p').innerHTML;
-        modal.querySelector('.modal-body p').innerHTML = description;
-        // Jika terdapat gambar, ambil elemen <img> dan masukkan ke modal
-        let imgElem = this.querySelector('img');
-        if (imgElem) {
-          modal.querySelector('.modal-image').innerHTML = imgElem.outerHTML;
-        } else {
-          modal.querySelector('.modal-image').innerHTML = '';
-        }
-        // Tampilkan modal
-        modal.classList.remove('hidden');
-      });
-    });
-
-    // Tutup modal ketika tombol close diklik
-    document.getElementById('modal-close').addEventListener('click', function () {
-      document.getElementById('modal').classList.add('hidden');
-    });
-
-    // Tutup modal ketika klik di luar konten modal
-    document.getElementById('modal').addEventListener('click', function (e) {
-      if (e.target === this) {
-        this.classList.add('hidden');
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const btn  = document.getElementById('mobile-menu-button');
-      const menu = document.getElementById('mobile-menu');
-  
-      // Toggle menu ketika tombol diklik
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-  
-      // Pastikan menu tersembunyi lagi jika di‐resize ke desktop
-      window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768) {
-          menu.classList.add('hidden');
-        }
-      });
-    });
-  </script>
-
   <script src="main.js"></script>
 </body>
 </html>
