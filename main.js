@@ -5,6 +5,16 @@ import {
   
   initTWE({ Carousel });
 
+  function loadHTML(selector, file) {
+    fetch(file)
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector(selector).innerHTML = data;
+      });
+  }
+
+  loadHTML('#visi', "home/visi.html");
+
 // ----------------------------------------------------
 // Smooth Scrolling for All Internal Links
 // ----------------------------------------------------
